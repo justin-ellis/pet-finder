@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/justin-ellis/pet-finder/issues"
   },
-  "homepage": "https://github.com/justin-ellis/pet-finder#readme"
+  "homepage": "https://github.com/justin-ellis/pet-finder#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }

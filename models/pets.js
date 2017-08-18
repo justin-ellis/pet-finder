@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 const petSchema = mongoose.Schema({
   animal: String,
@@ -8,6 +7,8 @@ const petSchema = mongoose.Schema({
   sex: String,
   location: String,
   shelterId: String
-})
+});
 
-module.exports = mongoose.model('Pet', petSchema);
+const Pets = mongoose.model('Pet', petSchema);
+
+module.exports = Pets;

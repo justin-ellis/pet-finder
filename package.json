@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/justin-ellis/pet-finder#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "mongoose": "^4.11.7"
   }

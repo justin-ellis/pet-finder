@@ -3,10 +3,10 @@ const app = angular.module('PetFinder', []);
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
 
-	this.getPets = function(){
+	this.getBreedList = function(){
 		$http({
 			method: 'GET',
-			url: '/pets'
+			url: '/pets/getBreedList'
 		}).then(
 		function(response){
 			console.log(response);
@@ -16,4 +16,5 @@ app.controller('PetController', ['$http', function($http){
 
 		});
 	};
+
 }]);

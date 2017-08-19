@@ -3,9 +3,12 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const methodOverride = require('method-override');
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 app.use(session({
 	secret: "random secret string",
@@ -24,7 +27,6 @@ app.use('/session', sessions);
 
 
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/users';
-
 mongoose.connect(mongoUri);
 
 app.listen(3000, ()=>{

@@ -5,8 +5,9 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const methodOverride = require('method-override');
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
+//authentication only works with urlencoded enabled...not sure if the above two lines conflict or if we need bodyParser.json
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 

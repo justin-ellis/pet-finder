@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<header>
+	<nav>
+<div>
+ 	<ul>
+ 	<li>
+ 		<a href="/">Home</a>
+ 	</li>
+ 	<li>
+ 		<a href="/session/register">Register</a>
+ 	</li>
+</ul>
+
+</div>
+</nav>
+</header>
+
+
+<h2>Login</h2>
+<div>
+<form action="/session/login" method="POST">
+   Username: <input type="text" name="username" value="">
+   Password: <input type="password" name="password" value="">
+   <button id="register">Login</button>
+</form>
+</div>
+<%if(message) {%>
+<br/>
+<p><%=message%> </p>
+<%}%>
+
+
+
+<footer>
+
+  </footer>
+
+</body>
+</html>

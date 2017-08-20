@@ -7,6 +7,7 @@ app.controller('PetController', ['$http', function($http){
 		$http({
 			method: 'GET',
 			url: '/pets/getBreedList'
+			//'http:api.petfinder.com/breed.list?key=37098abef8c6bba64b806723901d3d6a&animal=dog&format=json'
 		}).then(
 		function(response){
 			console.log(response);

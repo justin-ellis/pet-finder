@@ -45,6 +45,7 @@ User.create(userDbEntry, (err, user)=>{
 	req.session.username = user.username;
 	req.session.logged = true;
 	});
+	res.redirect('/members');
 });
 
 // Member.create(req.body, (err, createdMember)=>{

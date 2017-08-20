@@ -2,9 +2,9 @@ const petfinder = require('petfinder')('37098abef8c6bba64b806723901d3d6a', '0e40
 
 const getBreedList = (res, data) => {
 
-  const response = (res, data) => {
-    res.send(data)
-  }
+  // const response = (res, data) => {
+  //   res.send(data)
+  // }
 
 petfinder.getBreedList('cat',function(err, breeds) {
 console.log(breeds)
@@ -12,10 +12,15 @@ console.log(breeds)
 
 
 petfinder.findPet(27615, {'animal': 'dog', 'breed': 'Labrador Retriever', 'count': 20}, function(err, pet) {
+<<<<<<< HEAD
   console.log(cat);
+=======
+  res.send(pet);
+>>>>>>> 799e3719e7abdf5584faf84008b152947630a15b
 })
 }
 
+module.exports = getBreedList;
 // petfinder.findShelter(27615, {'animal': 'dog','count':10}, function(err, pet) {
 //   console.log(pet);
 // })
@@ -26,5 +31,3 @@ petfinder.findPet(27615, {'animal': 'dog', 'breed': 'Labrador Retriever', 'count
 // })
 // }
 
-
-module.exports = getBreedList;

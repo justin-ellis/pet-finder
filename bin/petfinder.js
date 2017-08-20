@@ -12,7 +12,7 @@ const getBreedList = (res, data) => {
 
 
 petfinder.findPet(27615, {'animal': 'dog', 'breed': 'Labrador Retriever', 'count': 20}, function(err, pet) {
-  console.log(pet);
+  console.log(cat);
 })
 }
 

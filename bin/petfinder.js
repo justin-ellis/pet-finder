@@ -12,11 +12,7 @@ console.log(breeds)
 
 
 petfinder.findPet(27615, {'animal': 'dog', 'breed': 'Labrador Retriever', 'count': 20}, function(err, pet) {
-<<<<<<< HEAD
-  console.log(cat);
-=======
   res.send(pet);
->>>>>>> 799e3719e7abdf5584faf84008b152947630a15b
 })
 }
 
@@ -30,4 +26,3 @@ module.exports = getBreedList;
 //   console.log(pet);
 // })
 // }
-

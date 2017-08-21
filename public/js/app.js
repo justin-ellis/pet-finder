@@ -18,4 +18,22 @@ app.controller('PetController', ['$http', function($http){
 		});
 	};
 
+this.getSheltersWithBreeds  = function(animal, breed, shelterId) {
+        $http({
+            method: "GET",
+            url: "/pets/getSheltersWithBreeds",
+            data: {
+                name: this.name,
+                description: this.description,
+                // contactemail: this.data.contact.email, //data[0].contact.
+                // contactphone: this.data.contact.phone
+            }
+        }).then(function (response){
+            console.log(response);
+            controller.shelterInfo = response.data;
+        },
+        function(error){
+        })
+      }
+
 }]);

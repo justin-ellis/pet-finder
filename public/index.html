@@ -35,15 +35,29 @@
 		    </ul>
 
 		 <form ng-submit="petCtrl.getSheltersWithBreeds();">
-                      Type of Animal: <input type="text" ng-model="petCtrl.animal" />
+                      <!-- Type of Animal: <input type="text" ng-model="petCtrl.animal" />
                       Breed: <input type="text" ng-model="petCtrl.breed" />
                       Size: <input type="text" ng-model="petCtrl.size" />
                       Gender: <input type="text" ng-model="petCtrl.sex" />
                       Age: <input type="text" ng-model="petCtrl.age" />
                       Location: <input type="text" ng-model="petCtrl.location" />
-                      zip: <input type="text" ng-model="petCtrl.zip" />
-                      <input type="submit" value="Submit"/><br/><br/>
+                      zip: <input type="text" ng-model="petCtrl.zip" /> -->
+                      <!-- <input type="text" value="Submit"/><br/><br/> -->
                     </form>
+
+
+  <form ng-submit="petCtrl.getBreedList()">
+    zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
+      <input type="submit" value="submit">
+
+  </form>
+
+
+
+
+
+
+
 
 
 
@@ -55,8 +69,9 @@
                         About {{shelterInfo.name}}: {{shelterInfo.description}}<br/>
                         {{shelterInfo.shelterId}}
                         Adoption Shelter's Contact Info:
-                        {{shelterInfo.contact[0].email}}<br/>
-                        {{shelterInfo.contact[0].phone}}</li>
+<!--                         {{shelterInfo.contact[0].email}}<br/>
+                        {{shelterInfo.contact[0].phone}} -->
+                        </li>
 
                     </ul>
 

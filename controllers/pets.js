@@ -4,9 +4,9 @@ const Pets = require('../models/pets.js');
 const getBreedList = require('../bin/petfinder.js')
 const getSheltersWithBreeds = require('../bin/petfinder.js')
 
-router.get('/getBreedList', (req, res)=>{
+router.post('/getBreedList', (req, res)=>{
 	console.log('req.body: ', req.body);
-	getBreedList(res, req.body.zip,
+	getBreedList(res, req.body,
 		req.body.animal);
 
 	// Pets.find({}, (err foundUsers)=>{

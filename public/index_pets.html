@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="PetFinder" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap Four Column Convertible Layout</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><div class="container">
+</head>
+<body ng-controller="PetController as petCtrl">
+      <div class="row">
+            <div class="col-sm-12">
+                <div class="header">
+                <h1>Welcome to Pet Finder!</h1>
+                <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Adopt Now <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Shelter Information <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Volunteer <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+
+                <ul>
+                 	<li>
+                 		<a href="/session/login">Login</a>
+                 	</li>
+                 	<li>
+                 		<a href="/session/register">Register</a>
+                 	</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="intro">
+
+                  <button ng-click='petCtrl.getBreedList()'>Click Me</button>
+              		  <ul>
+              		      <li ng-repeat='pets in petCtrl.pets'>
+              		       Animal: {{pets.animal}}<br/>
+              		       Name: {{pets.name}}<br/>
+              		       Breed: {{pets.breed}}<br/>
+              		      </li>
+              		  </ul>
+
+                    <ul>
+                      <li ng-repeat="animal in petctrl.animal">
+                        {{animal}}
+                      </li>
+                    </ul>
+
+                    <form ng-submit="getSheltersWithBreeds();">
+                      Type of Animal: <input type="text" ng-model="ctrl.animal" />
+                      Breed: <input type="text" ng-model="ctrl.breed" />
+                      Size: <input type="text" ng-model="ctrl.size" />
+                      Gender: <input type="text" ng-model="ctrl.sex" />
+                      Age: <input type="text" ng-model="ctrl.age" />
+                      Location: <input type="text" ng-model="ctrl.location" />
+                      <input type="submit" value="Submit"/><br/><br/>
+                    </form>
+
+                    <ul>
+                      <li ng-repeat="shelterInfo in petctrl.shelterInfo">
+                        Name: {{petctrl.name}}<br/>
+                        About {{petctrl.name}}: {{ctrl.description}}<br/>
+                        Adoption Shelter's Contact Info:
+                        {{petctrl.contact.email}}<br/>
+                        {{petctrl.contact.phone}}</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="section"></div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="section bg-alt"></div>
+            </div>
+			<div class="clearfix visible-sm-block"></div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="section"></div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-3">
+                <div class="section bg-alt"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer"></div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

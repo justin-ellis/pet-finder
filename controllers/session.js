@@ -45,7 +45,7 @@ User.create(userDbEntry, (err, user)=>{
 	req.session.username = user.username;
 	req.session.logged = true;
 	});
-	res.redirect('/members');
+	res.redirect('/members/new.ejs');
 });
 
 // Member.create(req.body, (err, createdMember)=>{

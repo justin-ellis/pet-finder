@@ -16,21 +16,24 @@ app.controller('PetController', ['$http', function($http){
 		}
 	);
 };
-	this.getSheltersWithBreeds  = function(animal, breed, callback) {
+	this.getSheltersWithBreeds  = function(animal, breed, location) {
 		$http({
 			method: "GET",
 			url: "#",
 			data: {
-				// name: this.name,
-				breed: this.breed,
-				size: this.size,
-				sex: this.sex,
-				age: this.age,
-				location: this.location
+				name: this.name,
+				description: this.description,
+				contact.email: this.contact.email,
+				contact.phone: this.contact.phone
 			}
 		}).then(function, (response){
 			console.log(response);
-		})
-	}
+			controller.shelterInfo = response.data;
+		}
+		function(error){
+
+		}
+	),
+}
 
 }]);

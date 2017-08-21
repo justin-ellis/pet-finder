@@ -4,7 +4,29 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+<<<<<<< HEAD
   <body>
     <h1>hello</h1>
   </body>
 </html>
+=======
+  	<ul>
+		<li>
+		<a href="/">Home</a>
+		</li>
+		<li>
+		<a href="/members/new">Create a new Member</a>
+		</li>
+		<li>
+ 				<a href="/session/logout">Logout</a>
+ 			</li>
+		</ul>
+  <body>
+    <h1>index</h1>
+    <h1>Current Members</h1>
+		<% for (let i = 0; i < members.length; i++) {%>
+		<a href="/members/<%=members[i].id%>"><%= members[i].username %></a> <br/>
+		<%}%>
+  </body>
+</html>
+>>>>>>> 9464e72772019e96b347777d9d41d613e3dd8dc5

@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
+
 app.use(session({
 	secret: "random secret string",
 	resave: false,

@@ -24,7 +24,9 @@
 </header>
 <body ng-controller="PetController as petCtrl">
     <h1>Welcome to Pet Finder!</h1>
-    <button ng-click='petCtrl.getBreedList()'>Click Me</button>
+    <button ng-click='petCtrl.getBreedList()'>Run the bin function</button>
+
+	
 
 				<ul>
 		        <li ng-repeat='pets in petCtrl.pets'>
@@ -34,5 +36,16 @@
 		        </li>
 		    </ul>
 
-</body>
+	<form ng-submit="petCtrl.getBreedListZip();">
+		zip code: <input type="text" ng-model="petCtrl.zip" >
+		{{petCtrl.zip}}
+		<input type="submit" value="submit zip code">
+	</form>
+
+
+<!-- 		<button ng-click="petCtrl.getTacos(taco);">tacos</button>
+	<ul>
+		<li ng-repeat='tacos in petCtrl.tacos'></li>
+	</ul> -->
+</body>	
 </html>

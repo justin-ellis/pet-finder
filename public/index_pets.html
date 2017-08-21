@@ -9,7 +9,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><div class="container">
 </head>
-<body ng-controller="PetController as petCtrl">
+<body ng-controller="PetController as ">
       <div class="row">
             <div class="col-sm-12">
                 <div class="header">
@@ -63,9 +63,9 @@
             <div class="col-sm-12">
                 <div class="intro">
 
-                  <button ng-click='petCtrl.getBreedList()'>Click Me</button>
+                  <button ng-click='.getBreedList()'>Click Me</button>
               		  <ul>
-              		      <li ng-repeat='pets in petCtrl.pets'>
+              		      <li ng-repeat='pets in .pets'>
               		       Animal: {{pets.animal}}<br/>
               		       Name: {{pets.name}}<br/>
               		       Breed: {{pets.breed}}<br/>
@@ -73,28 +73,28 @@
               		  </ul>
 
                     <ul>
-                      <li ng-repeat="animal in petctrl.animal">
+                      <li ng-repeat="animal in .animal">
                         {{animal}}
                       </li>
                     </ul>
 
                     <form ng-submit="getSheltersWithBreeds();">
-                      Type of Animal: <input type="text" ng-model="ctrl.animal" />
-                      Breed: <input type="text" ng-model="ctrl.breed" />
-                      Size: <input type="text" ng-model="ctrl.size" />
-                      Gender: <input type="text" ng-model="ctrl.sex" />
-                      Age: <input type="text" ng-model="ctrl.age" />
-                      Location: <input type="text" ng-model="ctrl.location" />
+                      Type of Animal: <input type="text" ng-model="petCtrl.animal" />
+                      Breed: <input type="text" ng-model="petCtrl.breed" />
+                      Size: <input type="text" ng-model="petCtrl.size" />
+                      Gender: <input type="text" ng-model="petCtrl.sex" />
+                      Age: <input type="text" ng-model="petCtrl.age" />
+                      Location: <input type="text" ng-model="petCtrl.location" />
                       <input type="submit" value="Submit"/><br/><br/>
                     </form>
 
                     <ul>
-                      <li ng-repeat="shelterInfo in petctrl.shelterInfo">
-                        Name: {{petctrl.name}}<br/>
-                        About {{petctrl.name}}: {{ctrl.description}}<br/>
+                      <li ng-repeat="shelterInfo in .shelterInfo">
+                        Name: {{shelterInfo.name}}<br/>
+                        About {{shelterInfo.name}}: {{shelterInfo.description}}<br/>
                         Adoption Shelter's Contact Info:
-                        {{petctrl.contact.email}}<br/>
-                        {{petctrl.contact.phone}}</li>
+                        {{shelterInfo.contact[0].email}}<br/>
+                        {{shelterInfo.contact[0].phone}}</li>
                     </ul>
 
 

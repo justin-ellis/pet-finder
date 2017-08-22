@@ -68,5 +68,31 @@ this.findPetListInZip = function(zip){
 
         });
     };
+			this.wishList = function(){
+				this.message = "Thank you. Your wishlist will be submitted to the adoption shelters in your area.They will reach out to you if the animal on your list becomes available.";
+				$http({
+					method: "POST",
+					url: "#",
+					data: {
+						animal: this.animal,
+						breed: this.breed,
+						size: this.size,
+						sex: this.sex,
+						age: this.age,
+						location: this.location
+					}
+				}).then (
+					function(){
+						console.log("success");
+						return this.message;
+					},
+					function(error){
 
+					});
+			};
+			this.toggle = true;
+
+			this.toggleView = ()=> {
+				this.toggle = !this.toggle;
+			};
 }]);

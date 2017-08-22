@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="PetFinder">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="/js/app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+  <%# <body> //make sure to add petctrl.name as a variable to refer to%>
+      <h1>Welcome back {{petCtrl.name}}!</h1>
+
+      <h2>Create an Adoption Wishlist</h2>
+      <p>Is there a specific animal that you're hoping to see for adoption? Fill this out and if one becomes available
+        close to you, we will reach out and let you know!</p>
+
+
+        <%# //what is location for mbr and pet? should we change this to zip%>
+      <form ng-submit="wishList();">
+        Type of Animal: <input type="text" ng-model="petCtrl.animal" />
+        Breed: <input type="text" ng-model="petCtrl.breed" />
+        Size: <input type="text" ng-model="petCtrl.size" />
+        Gender: <input type="text" ng-model="petCtrl.sex" />
+        Age: <input type="text" ng-model="petCtrl.age" />
+        Location: <input type="text" ng-model="petCtrl.location" />
+        <input type="submit" value="Submit"/><br/><br/>
+      </form>
+
+      <div class="message" ng-hide="petCtrl.toggle">
+        {{petCtrl.message}}
+      </div>
+
+  </body>
+</html>

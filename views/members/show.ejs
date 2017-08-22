@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 9464e72772019e96b347777d9d41d613e3dd8dc5
+=======
+>>>>>>> befc307e8a55c5ce4eda40626869369377b1cf0b
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,11 +13,26 @@
   </head>
   <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <h1>stuff, things</h1>
   </body>
 </html>
 =======
     <h1>show</h1>
+=======
+
+    <h1>Member Show Page</h1>
+  </body>
+</html>
+    <h3><%=member.username%></h3>
+    <p>Zip Code: <%=member.zipcode%></p>
+
+    <a href='/members/<%=member.id%>/edit'>Edit Member</a>
+
+    <form action='/members/<%=member.id%>?_method=DELETE' method='POST'>
+      <input type='submit' value='Delete Member'/>
+    </form>
+>>>>>>> befc307e8a55c5ce4eda40626869369377b1cf0b
   </body>
 </html>
 >>>>>>> 9464e72772019e96b347777d9d41d613e3dd8dc5

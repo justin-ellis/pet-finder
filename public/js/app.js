@@ -49,8 +49,8 @@ this.getSheltersWithBreeds  = function(animal, breed, shelterId) {
             console.log(controller.animal);
         },
         function(error){
-        })
-      }
+        });
+      };
 
 this.findPetListInZip = function(zip){
         $http({
@@ -64,12 +64,43 @@ this.findPetListInZip = function(zip){
         function(response){
             console.log(response);
             controller.petsInZip = response.data;
-            controller.desc = response.data[0].description
+            controller.desc = response.data[0].description;
             console.log(controller.desc);
         },
         function(error){
 
         });
     };
+    //         this.wishList = function(){
+    //             this.message = ("Thank you. Your wishlist will be submitted to the adoption shelters in your area.They will reach out to you if the animal on your list becomes available.");
+    //             $http({
+    //                 method: "POST",
+    //                 url: "#",
+    //                 data: {
+    //                     animal: this.animal,
+    //                     breed: this.breed,
+    //                     size: this.size,
+    //                     sex: this.sex,
+    //                     age: this.age,
+    //                     location: this.location
+    //                 }
+    //             }).then (
+    //                 function(){
+    //                     console.log("success");
+    //                     return this.message;
+    //                 },
+    //                 function(error){
+
+    //                 });
+    //         };
+    //         this.toggle = true;
+
+    //         this.toggleView = ()=> {
+    //             this.toggle = !this.toggle;
+    //         };
+    //         $scope.function = myFunction() => {
+    // const popup = document.getElementById("myPopup");
+    // popup.classList.toggle("show");
+    // }
 
 }]);

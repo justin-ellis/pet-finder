@@ -95,4 +95,8 @@ this.findPetListInZip = function(zip){
 			this.toggleView = ()=> {
 				this.toggle = !this.toggle;
 			};
+	// 		$scope.function = myFunction() {
+  //   const popup = document.getElementById("myPopup");
+  //   popup.classList.toggle("show");
+	// }
 }]);

@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-<script src="/js/app.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="/css/main.css">
-<link rel="stylesheet" type="text/css" href="/css/main.css">
+<script src="js/app.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 <body ng-controller="PetController as petCtrl">
@@ -21,32 +21,31 @@
     Adoption <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
+    <li><a href="#">Adopt your next pet now</a></li>
+    <li><a href="#">Submit a wishlist for your desired pet</a></li>
+    <li><a href="#">How to care for your new pet</a></li>
     <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
+    <li><a href="#">Look at map to see local shelters</a></li>
   </ul>
 
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Shelter Information <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
+    <li><a href="#">Find a shelter in your area</a></li>
+    <li><a href="#">Fostering dogs and cats</a></li>
+    <li><a href="#">Look through our articles</a></li>
     <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
+    <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/search/?location=austin%2C+texas&shelter_name=">Find pet adoption groups</a></li>
   </ul>
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Volunteer <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
+    <li><a href="#">How to get started</a></li>
+    <li><a href="#">Volunteer vacations</a></li>
+    <li><a href="#">local adoption shelter contact</a></li>
     <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
   </ul>
                   </div>
 
@@ -92,7 +91,7 @@
                     </form>
 
                     <ul>
-                      <li ng-repeat="shelterInfo in .shelterInfo">
+                      <li ng-repeat="shelterInfo in petCtrl.shelterInfo">
                         Name: {{shelterInfo.name}}<br/>
                         About {{shelterInfo.name}}: {{shelterInfo.description}}<br/>
                         Adoption Shelter's Contact Info:
@@ -100,23 +99,76 @@
                         {{shelterInfo.contact[0].phone}}</li>
                     </ul>
 
+                    <h2>All About Find A Pet</h2>
+                    <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
+                      nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
+                      maintain their own home pages and available-pet databases. </p><br/>
 
+                    <p>By utilizing the internet, we can: </p>
+                      <ul>
+                        <li>Increase public awareness of the availability of high-quality adoptable pet</li>
+                        <li>ncrease the overall effectiveness of pet adoption programs across North America to the extent
+                          that the euthanasia of adoptable pets is eliminated</li>
+                        <li>Elevate the status of pets to that of family member</li>
+                      </ul>
+
+                      <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs.
+                        They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
+                        forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
+
+                      <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
                 </div>
             </div>
         </div>
+
+
+
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="section"></div>
+                <div class="section">
+                  <img src='https://peopledotcom.files.wordpress.com/2017/08/adoptable-dog.jpg?w=669' class="img-responsive" />
+                </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="section bg-alt"></div>
+                <div class="section bg-alt">
+                  <img src='https://s-media-cache-ak0.pinimg.com/736x/0f/f4/c8/0ff4c8adad2544f804b7157a6a043004--feral-cats-animal-protection.jpg' class="img-responsive" />
+                </div>
+
+
+                <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+                  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+                </div>
+
+<!-- <div class="statistic">
+  <p>278,927 adoptable pets waiting to be your loyal companion</p>
+</div> -->
+<div ng-controller="myCtrl">
+    <button ng-click="myFunc()">OK</button>
+    <p>The button has been clicked {{count}} times.</p>
+</div>
+
+<script>
+angular.module('myApp', [])
+.controller('myCtrl', ['$scope', function($scope) {
+    $scope.count = 0;
+    $scope.myFunc = function() {
+        $scope.count++;
+    };
+}]);
+</script>
+
+
             </div>
 			<div class="clearfix visible-sm-block"></div>
             <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="section"></div>
+                <div class="section">
+                  <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg?w=600&h=450" class="img-responsive"/>
+                </div>
             </div>
             <div class="col-sm-6 col-md-12 col-lg-3">
-                <div class="section bg-alt"></div>
+                <div class="section bg-alt">
+                  <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-responsive" />
+                </div>
             </div>
         </div>
         <div class="row">

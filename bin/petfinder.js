@@ -1,3 +1,4 @@
+// in env
 const apiKey = process.env.API_KEY
 const apiSecret = process.env.API_SECRET
 const petfinder = require('petfinder')(apiKey, apiSecret);

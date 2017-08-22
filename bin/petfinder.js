@@ -7,14 +7,15 @@ const getBreedList = (res, data) => {
   // }
 
 petfinder.getBreedList('cat',function(err, breeds) {
-console.log(breeds)
-})
+console.log(breeds);
+});
 
 
-petfinder.findPet(27615, {'animal': 'dog', 'breed': 'Labrador Retriever', 'count': 20}, function(err, pet) {
+petfinder.findPet(27615, {'count':3}, function(err, pet) {
   res.send(pet);
-})
-}
+});
+};
+// 'animal': 'dog', 'breed': 'Labrador Retriever', 'count': 20
 
 module.exports = getBreedList;
 // petfinder.findShelter(27615, {'animal': 'dog','count':10}, function(err, pet) {

@@ -4,79 +4,82 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Example of Bootstrap Four Column Convertible Layout</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><div class="container">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+<script src="/js/app.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
 </head>
 <body ng-controller="PetController as petCtrl">
+    <div class="container">
       <div class="row">
             <div class="col-sm-12">
                 <div class="header">
                 <h1>Welcome to Pet Finder!</h1>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Adopt Now <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Shelter Information <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Volunteer <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Sign In</a></li>
-                    </ul>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Adoption <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Shelter Information <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Volunteer <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
                   </div>
 
 
-                <ul>
-                 	<li>
-                 		<a href="/session/login">Login</a>
-                 	</li>
-                 	<li>
-                 		<a href="/session/register">Register</a>
-                 	</li>
-                </ul>
+                  <ul>
+                   	<li>
+                   		<a href="/session/login">Login</a>
+                   	</li>
+                   	<li>
+                   		<a href="/session/register">Register</a>
+                   	</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="intro">
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="intro">
 
-                  <button ng-click='.getBreedList()'>Click Me</button>
-              		  <ul>
-              		      <li ng-repeat='pets in .pets'>
-              		       Animal: {{pets.animal}}<br/>
-              		       Name: {{pets.name}}<br/>
-              		       Breed: {{pets.breed}}<br/>
-              		      </li>
-              		  </ul>
+                    <!-- <button ng-click='.getBreedList()'>Click Me</button>
+                		  <ul>
+                		      <li ng-repeat='pets in .pets'>
+                		       Animal: {{pets.animal}}<br/>
+                		       Name: {{pets.name}}<br/>
+                		       Breed: {{pets.breed}}<br/>
+                		      </li>
+                		  </ul>
 
-                    <ul>
-                      <li ng-repeat="animal in .animal">
-                        {{animal}}
-                      </li>
-                    </ul>
+                      <ul>
+                        <li ng-repeat="animal in .animal">
+                          {{animal}}
+                        </li>
+                      </ul> -->
 
                     <form ng-submit="getSheltersWithBreeds();">
                       Type of Animal: <input type="text" ng-model="petCtrl.animal" />

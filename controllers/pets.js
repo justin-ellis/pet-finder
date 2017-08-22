@@ -18,7 +18,13 @@ router.get('/getSheltersWithBreeds', (req, res)=>{
 	console.log('req.body: ', req.body);
 	getSheltersWithBreeds(res, req.body.zip,
 		req.body.animal);
-		
+
 });
+
+//start of get route for ishList function, nott sure if we will use or not
+// router.post("", (req, res)=>{
+// 	console.log('req.body: ', req.body);
+// 	wishList(res, req.body)
+// })
 
 module.exports = router;

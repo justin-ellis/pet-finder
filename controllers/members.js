@@ -7,10 +7,9 @@ const methodOverride = require('method-override');
 router.use(bodyParser.urlencoded({extended:false}));
 router.use(methodOverride('_method'));
 
-
 router.get('/', (req, res)=>{
 	Member.find({}, (err, foundMembers)=>{
-		res.render('members/index.ejs', {	
+		res.render('members/index.ejs', {
 			members:foundMembers
 		});
 	});
@@ -21,6 +20,7 @@ router.put('/:id', (req, res) => {
 		res.redirect('/members')
 	})
 })
+
 
 router.post('/', (req, res)=>{
 	Member.create(req.body, (err, createdMember)=>{
@@ -53,5 +53,8 @@ router.delete('/:id', (req, res) => {
 		res.redirect('/members');
 		});
 	})
+
+
+
 
 module.exports = router;

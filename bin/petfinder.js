@@ -1,16 +1,25 @@
 const petfinder = require('petfinder')('37098abef8c6bba64b806723901d3d6a', '0e40dc8ff32b8f1be0cbfca13a15f5ed');
 
-const getBreedList = (res, body, animal) => {
+const getBreedList = (res, body) => {
 
-const test = {'count': 5}
+const test = {'count': 2}
 
 petfinder.findPet(body.zip, test, function(err, pet) {
   res.send(pet);
 });
 };
 
+// const getBreeds = (res, body) => {
+	
+// petfinder.getBreedList(body.animal, function(err, breeds) {
+// res.send(breeds);
+// });
+// };
 
+
+// module.exports = getBreeds;
 module.exports = getBreedList;
+// module.exports = getBreeds;
 // petfinder.findShelter(27615, {'animal': 'dog','count':10}, function(err, pet) {
 //   console.log(pet);
 // })

@@ -69,7 +69,7 @@ this.findPetListInZip = function(zip){
         });
     };
 			this.wishList = function(){
-				this.message = "Thank you. Your wishlist will be submitted to the adoption shelters in your area.They will reach out to you if the animal on your list becomes available.";
+				this.message = ("Thank you. Your wishlist will be submitted to the adoption shelters in your area.They will reach out to you if the animal on your list becomes available.");
 				$http({
 					method: "POST",
 					url: "#",
@@ -95,8 +95,8 @@ this.findPetListInZip = function(zip){
 			this.toggleView = ()=> {
 				this.toggle = !this.toggle;
 			};
-	// 		$scope.function = myFunction() {
-  //   const popup = document.getElementById("myPopup");
-  //   popup.classList.toggle("show");
-	// }
+			$scope.function = myFunction() {
+    const popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+	}
 }]);

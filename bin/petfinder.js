@@ -2,15 +2,26 @@ const petfinder = require('petfinder')('37098abef8c6bba64b806723901d3d6a', '0e40
 
 const getBreedList = (res, body, animal) => {
 
-const test = {'count': 3}
+
+  // const response = (res, data) => {
+  //   res.send(data)
+  // }
+
+// petfinder.getBreedList('cat',function(err, breeds) {
+// console.log(breeds)
+// })
+// }
+
+const zippy = 98335;
+const test = {'count': 15}
 
 petfinder.findPet(body.zip, test, function(err, pet) {
+
   res.send(pet);
 });
 };
 
 
-module.exports = getBreedList;
 // petfinder.findShelter(27615, {'animal': 'dog','count':10}, function(err, pet) {
 //   console.log(pet);
 // })
@@ -24,6 +35,7 @@ module.exports = getBreedList;
 // })
 // }
 
+module.exports = getBreedList;
 
 // http://api.petfinder.com/pet.find?key=37098abef8c6bba64b806723901d3d6a&location=98335&format=json
 //finds pets in certain zip

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const methodOverride = require('method-override');
-// require('dotenv').config()
+require('dotenv').config()
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));

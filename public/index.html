@@ -26,15 +26,8 @@
     <h1>Welcome to Pet Finder!</h1>
     <button ng-click='petCtrl.getBreedList()'>Click Me</button>
 
-				<ul>
-		        <li ng-repeat='pets in petCtrl.pets'>
-		            Animal: {{pets.animal}}<br/>
-		            Name: {{pets.name}}<br/>
-		            Breed: {{pets.breeds}}<br/>
-		        </li>
-		    </ul>
 
-		 <form ng-submit="petCtrl.getSheltersWithBreeds();">
+     <form ng-submit="petCtrl.getSheltersWithBreeds();">
                       <!-- Type of Animal: <input type="text" ng-model="petCtrl.animal" />
                       Breed: <input type="text" ng-model="petCtrl.breed" />
                       Size: <input type="text" ng-model="petCtrl.size" />
@@ -52,6 +45,14 @@
 
   </form>
 
+				<ul>
+		        <li ng-repeat='pets in petCtrl.pets'>
+		            Animal: {{pets.animal}}<br/>
+		            Name: {{pets.name}}<br/>
+		            Breed: {{pets.breeds}}<br/>
+		        </li>
+		    </ul>
+   
 
 
 
@@ -60,10 +61,7 @@
 
 
 
-
-
-
-	 <ul>
+   <ul>
                       <li ng-repeat="shelterInfo in petCtrl.shelterInfo">
                         Name: {{shelterInfo.name}}<br/>
                         About {{shelterInfo.name}}: {{shelterInfo.description}}<br/>
@@ -74,6 +72,17 @@
                         </li>
 
                     </ul>
+
+
+
+
+
+
+
+
+
+
+
 
 <button ng-click='petCtrl.findPetListInZip(98335);'>zip</button>
 

@@ -2,14 +2,6 @@ const petfinder = require('petfinder')('37098abef8c6bba64b806723901d3d6a', '0e40
 
 const getBreedList = (res, body, animal) => {
 
-  // const response = (res, data) => {
-  //   res.send(data)
-  // }
-
-// petfinder.getBreedList('cat',function(err, breeds) {
-// console.log(breeds);
-// });
-const zippy = 98335;
 const test = {'count': 3}
 
 petfinder.findPet(body.zip, test, function(err, pet) {
@@ -25,6 +17,9 @@ module.exports = getBreedList;
 // }
 
 // petfinder.getRandomPet({'animal': 'dog'}, function(err, pet) {
+// petfinder.getBreedList('cat',function(err, breeds) {
+// console.log(breeds);
+// });
 //   console.log(pet);
 // })
 // }

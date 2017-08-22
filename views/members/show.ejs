@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>stuff, things</h1>
+  </body>
+</html>
+
+    <h1>show</h1>
+
+
+    <h1>Member Show Page</h1>
+  </body>
+</html>
+    <h3><%=member.username%></h3>
+    <p>Zip Code: <%=member.zipcode%></p>
+
+    <a href='/members/<%=member.id%>/edit'>Edit Member</a>
+
+    <form action='/members/<%=member.id%>?_method=DELETE' method='POST'>
+      <input type='submit' value='Delete Member'/>
+    </form>
+
+  </body>
+</html>

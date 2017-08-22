@@ -1,8 +1,8 @@
 const app = angular.module('PetFinder', []);
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
-    this.zip = "";
-    this.animal = '';
+    // this.zip = "";
+    // this.animal = '';
 
 	this.getBreedList = function(){
 		$http({

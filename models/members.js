@@ -4,7 +4,7 @@ const memberSchema = mongoose.Schema({
   username: {type: String, required: true, unique: true},
   profilePic: String,
   password: {type: String, required: true},
-  location: String,
+  zipcode: String,
   wishlist: []
 });
 

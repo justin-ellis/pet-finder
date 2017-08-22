@@ -5,6 +5,18 @@
     <title></title>
   </head>
   <body>
-    <h1>edit</h1>
+    <h1>User Edit Page</h1>
+  </body>
+</html>
+    <h1>Edit <%=member.username%></h1>
+
+
+    <form action='/members/<%=member.id%>?_method=PUT' method="POST">
+        Username: <input type="text" name="username" value='<%=member.username%>'>
+        Password: <input type="password" name="password">
+        Zip Code: <input type='text' name='zipcode' value='<%=member.zipcode%>'>
+        <input type="submit" value="Edit Member">
+    </form>
+
   </body>
 </html>

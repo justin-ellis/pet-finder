@@ -50,7 +50,13 @@ router.get('/:id/edit', (req, res) => {
 
 router.delete('/:id', (req, res) => {
 	Member.findByIdAndRemove(req.params.id, (error, foundMember) => {
-		res.redirect('/members');
+		req.session.destroy((err)=>{
+		if(err){
+
+		}else{
+			res.redirect('/');
+		}
+	});
 		});
 	})
 

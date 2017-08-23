@@ -1,15 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const User = require('../models/users');
 const Member = require('../models/members');
 
 router.get('/login', (req, res)=>{
-	res.render('users/login.ejs', {message: req.session.message || ""});
+	res.render('members/login.ejs', {message: req.session.message || ""});
 });
 
 router.post('/login', (req, res)=>{
-	User.findOne({username: req.body.username}, (err, user)=>{
+	Member.findOne({username: req.body.username}, (err, user)=>{
 if(user){
 	if(bcrypt.compareSync(req.body.password, user.password)){
 		req.session.message = "";
@@ -35,14 +34,16 @@ router.post('/register', (req, res)=>{
 const password = req.body.password;
 const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
-const userDbEntry = {};
-userDbEntry.username = req.body.username;
-userDbEntry.password = passwordHash;
+const memberDbEntry = {};
+memberDbEntry.username = req.body.username;
+memberDbEntry.password = passwordHash;
+memberDbEntry.zipcode = req.body.zipcode;
 
-User.create(userDbEntry, (err, user)=>{
-	console.log(user);
+Member.create(memberDbEntry, (err, member)=>{
+	console.log(member);
 	req.session.message = "";
-	req.session.username = user.username;
+	req.session.username = member.username;
+	req.session.zipcode = member.zipcode;
 	req.session.logged = true;
 	});
 	res.redirect('/members');
@@ -58,7 +59,7 @@ User.create(userDbEntry, (err, user)=>{
 
 
 router.get('/register', (req, res)=>{
-	res.render('users/register.ejs');
+	res.render('members/register.ejs');
 });
 
 router.get('/logout', (req, res)=>{

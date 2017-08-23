@@ -6,7 +6,7 @@
         border: blue 1px solid;
     }
     h1, h2 {
-      font-family: 'Short Stack', cursive;
+      font-family: 'Quicksand', sans-serif;
     }
     .footer{
         min-height: 60px;
@@ -38,6 +38,7 @@
         float: none;
         /*background: #dbdfe5;*/
     }
+
 
     /*.statistic {
       height: 150px;

@@ -23,6 +23,7 @@ app.controller('PetController', ['$http', function($http){
 		});
 	};
 
+
 	this.findShelter = function(){
         $http({
             method: 'POST',

@@ -69,6 +69,24 @@
                   </li>
               </div>
             </nav>
+                  <form ng-submit="petCtrl.getBreedList()">
+    Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
+    Animal: <input ng-model='petCtrl.animal' type='text' value='submit'><br/>
+    Breed: <input ng-model='petCtrl.breed' type='text' value='submit'><br/>
+    Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
+
+      <input type="submit" value="submit">
+  </form>
+
+				<ul>
+		        <li ng-repeat='pets in petCtrl.pets'>
+		            Name: {{pets.name}}<br/>
+		            Breed: {{pets.breeds}}<br/>
+                <img ng-src="{{pets.media.photos['1']['pn']}}">
+              <button ng-click="petCtrl.showStoredData()">Save this pet</button>
+		        </li>
+		    </ul>
+                
           </div>
         </div>
       </div>
@@ -97,34 +115,11 @@
                     forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
 
                 <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
-
-                <form ng-submit="petCtrl.getBreedList()">
-                  zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
-                             <input type="submit" value="submit">
-                </form>
-
-                <ul>
-                  <li ng-repeat='pets in petCtrl.pets'>
-                    Animal: {{pets.animal}}<br/>
-                    Name: {{pets.name}}<br/>
-                    Breed: {{pets.breeds}}<br/>
-                    Pictures: {{pets.media.photos}}
-                  </li>
-                </ul>
+                
               </div>
             </div>
           </div>
 
-                  <!-- <form ng-submit="petCtrl.getSheltersWithBreeds();">
-                                 Type of Animal: <input type="text" ng-model="petCtrl.animal" />
-                                   Breed: <input type="text" ng-model="petCtrl.breed" />
-                                   Size: <input type="text" ng-model="petCtrl.size" />
-                                   Gender: <input type="text" ng-model="petCtrl.sex" />
-                                   Age: <input type="text" ng-model="petCtrl.age" />
-                                   Location: <input type="text" ng-model="petCtrl.location" />
-                                   zip: <input type="text" ng-model="petCtrl.zip" />
-                                   <input type="text" value="Submit"/><br/><br/>
-                                 </form> -->
 
                                  <div class="row">
                                    <div class="col-sm-6 col-md-4">
@@ -162,3 +157,6 @@
                           </div>
               </body>
 </html>
+
+
+

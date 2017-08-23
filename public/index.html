@@ -23,19 +23,6 @@
 </header>
 <body ng-controller="PetController as petCtrl">
     <h1>Welcome to Pet Finder!</h1>
-    <!-- <button ng-click='petCtrl.getBreedList()'>Click Me</button> -->
-
-
-     <form ng-submit="petCtrl.getSheltersWithBreeds();">
-                      <!-- Type of Animal: <input type="text" ng-model="petCtrl.animal" />
-                      Breed: <input type="text" ng-model="petCtrl.breed" />
-                      Size: <input type="text" ng-model="petCtrl.size" />
-                      Gender: <input type="text" ng-model="petCtrl.sex" />
-                      Age: <input type="text" ng-model="petCtrl.age" />
-                      Location: <input type="text" ng-model="petCtrl.location" />
-                      zip: <input type="text" ng-model="petCtrl.zip" /> -->
-                      <!-- <input type="text" value="Submit"/><br/><br/> -->
-                    </form>
 
 
   <form ng-submit="petCtrl.getBreedList()">
@@ -55,27 +42,6 @@
 		            Breed: {{pets.breeds}}<br/>
 		        </li>
 		    </ul>
-
-
-
-
-
-
-
-
-
-   <ul>
-                      <li ng-repeat="shelterInfo in petCtrl.shelterInfo">
-                        Name: {{shelterInfo.name}}<br/>
-                        About {{shelterInfo.name}}: {{shelterInfo.description}}<br/>
-                        {{shelterInfo.shelterId}}
-                        Adoption Shelter's Contact Info:
-<!--                         {{shelterInfo.contact[0].email}}<br/>
-                        {{shelterInfo.contact[0].phone}} -->
-                        </li>
-
-                    </ul>
-
 
 </body>
 </html>

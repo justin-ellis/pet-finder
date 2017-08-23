@@ -9,27 +9,15 @@ app.controller('PetController', ['$http', function($http){
 			url: '/pets/getBreedList',
             data: {
                 zip: this.zip,
+								animal: this.animal,
+								breed: this.breed,
+								sex: this.sex
             }
 		}).then(
 		function(response){
 			console.log(response);
-
-            // for (var i = 0; i < response.data.length; i++) {
-            //     response[data.i]
-            // }
-
-
-
-
-            window.localStorage['petData'] = angular.toJson(response);
-			controller.pets = response.data;
 		},
 		function(error){
-
 		});
 	};
-    this.showStoredData = function(){
-        var storedData = window.localStorage['petData'];
-        console.log(storedData);
-    };
 }]);

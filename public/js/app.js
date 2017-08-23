@@ -7,6 +7,7 @@ app.controller('PetController', ['$http', function($http){
 		$http({
 			method: 'POST',
 			url: '/pets/getBreedList',
+			dataType: 'json',
             data: {
                 zip: this.zip,
 								animal: this.animal,
@@ -15,7 +16,9 @@ app.controller('PetController', ['$http', function($http){
             }
 		}).then(
 		function(response){
-			console.log(response);
+			for (var i = 0; i < 24; i++) {
+			console.log(response.data[i]);
+			}
 			controller.pets = response.data;
 		},
 		function(error){

@@ -16,6 +16,7 @@ app.controller('PetController', ['$http', function($http){
 		}).then(
 		function(response){
 			console.log(response);
+			controller.pets = response.data;
 		},
 		function(error){
 		});

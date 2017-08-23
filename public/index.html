@@ -69,14 +69,15 @@
                   </li>
               </div>
             </nav>
-                  <form ng-submit="petCtrl.getBreedList()">
-    Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
-    Animal: <input ng-model='petCtrl.animal' type='text' value='submit'><br/>
-    Breed: <input ng-model='petCtrl.breed' type='text' value='submit'><br/>
-    Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
 
+  <h2>Search for Pets</h2>
+    <form ng-submit="petCtrl.getBreedList()">
+      Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
+      Animal: <input ng-model='petCtrl.animal' type='text' value='submit'><br/>
+      Breed: <input ng-model='petCtrl.breed' type='text' value='submit'><br/>
+      Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
       <input type="submit" value="submit">
-  </form>
+    </form>
 
 				<ul>
 		        <li ng-repeat='pets in petCtrl.pets'>
@@ -86,7 +87,37 @@
               <button ng-click="petCtrl.showStoredData()">Save this pet</button>
 		        </li>
 		    </ul>
-                
+
+    <h2>Search for Shelters</h2>
+     <form ng-submit="petCtrl.findShelter()">
+       Zip: <input ng-model="petCtrl.zippy" type="text" value="submit">
+       <input type="submit" submit="submit">
+     </form>
+       <ul>
+         <li ng-repeat="shelters in petCtrl.shelters">
+           Shelter Name: {{shelters.name}}<br/>
+           Phone: {{shelters.phone}}<br/>
+           Email: {{shelters.email}}
+         </li>
+       </ul>
+
+       <!-- <script>
+         function initMap() {
+           var uluru = {lat: 40.563097, lng: -79.996151};
+           var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 4,
+             center: uluru
+           });
+           var marker = new google.maps.Marker({
+             position: uluru,
+             map: map
+           });
+         }
+       </script>
+       <script async defer
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6JL-diHV7EM3mSxVE2YvbDWH4Q4gBCZE&callback=initMap">
+       </script> -->
+
           </div>
         </div>
       </div>
@@ -115,7 +146,7 @@
                     forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
 
                 <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
-                
+
               </div>
             </div>
           </div>
@@ -157,6 +188,3 @@
                           </div>
               </body>
 </html>
-
-
-

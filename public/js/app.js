@@ -1,8 +1,9 @@
 const app = angular.module('PetFinder', []);
 
+
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
-	const petArray = [];
+	let petArray = [];
 	this.getBreedList = function(){
 		$http({
 			method: 'POST',
@@ -16,17 +17,27 @@ app.controller('PetController', ['$http', function($http){
             }
 		}).then(
 		function(response){
+			petArray = [];
 			for (i = 0; i < 24; i++) {
-			console.log(response.data[i]);
+			// console.log(response.data[i]);
+
 			petArray.push(response.data[i]);
 			
 			}
-  	console.log(petArray);
 			controller.pets = response.data;
 		},
 		function(error){
 		});
 	};
+
+	this.savePet = function(index){
+
+		// Member.wishlist.push(petArray[index]);
+		console.log(petArray[index]);
+		console.log(index);
+	};
+
+
 
 // window.localStorage['petData'][i] = angular.toJson(response.data[i]);
 // 	this.showStoredData = function(){

@@ -1,4 +1,3 @@
-
 // in env
 const apiKey = process.env.API_KEY
 const apiSecret = process.env.API_SECRET
@@ -6,8 +5,8 @@ const petfinder = require('petfinder')(apiKey, apiSecret);
 
 // const apiKey = process.env.API_KEY
 // const apiSecret = process.env.API_SECRET
-const getBreedList = (res, body, animal) => {
 
+const getBreedList = (res, body) => {
 
 const zippy = 98335;
 const test = {'count': 15}
@@ -16,6 +15,13 @@ petfinder.findPet(body.zip, {'animal': body.animal, 'breed': body.breed, 'sex': 
   res.send(pet);
 });
 };
+
+// const getBreeds = (res, body) => {
+
+// petfinder.getBreedList(body.animal, function(err, breeds) {
+// res.send(breeds);
+// });
+// };
 
 
 module.exports = getBreedList;

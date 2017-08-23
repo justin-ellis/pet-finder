@@ -23,7 +23,7 @@
 </header>
 <body ng-controller="PetController as petCtrl">
     <h1>Welcome to Pet Finder!</h1>
-    <button ng-click='petCtrl.getBreedList()'>Click Me</button>
+    <!-- <button ng-click='petCtrl.getBreedList()'>Click Me</button> -->
 
 
      <form ng-submit="petCtrl.getSheltersWithBreeds();">
@@ -39,7 +39,11 @@
 
 
   <form ng-submit="petCtrl.getBreedList()">
-    zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
+    Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
+    Animal: <input ng-model='petCtrl.animal' type='text' value='submit'><br/>
+    Breed: <input ng-model='petCtrl.breed' type='text' value='submit'><br/>
+    Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
+
       <input type="submit" value="submit">
 
   </form>
@@ -71,21 +75,6 @@
                         </li>
 
                     </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-<button ng-click='petCtrl.findPetListInZip(98335);'>zip</button>
-
-
 
 
 </body>

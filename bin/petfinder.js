@@ -21,11 +21,12 @@ const getBreedList = (res, body, animal) => {
 const zippy = 98335;
 const test = {'count': 15}
 
-petfinder.findPet(body.zip, test, function(err, pet) {
-
+petfinder.findPet(body.zip, {'animal': body.animal, 'breed': body.breed, 'sex': body.sex, test}, function(err, pet) {
   res.send(pet);
 });
 };
+
+
 
 
 // petfinder.findShelter(27615, {'animal': 'dog','count':10}, function(err, pet) {

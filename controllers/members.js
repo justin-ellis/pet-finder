@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Member = require('../models/members.js');
+const Pet = require('../models/pets.js');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -13,6 +14,24 @@ router.get('/', (req, res)=>{
 			members:foundMembers
 		});
 	});
+});
+// store member id in session
+router.post('/getPetData', (req, res)=>{
+	Pet.create(req.body['petData'], ()=>{
+		Member.findOne({'username':'Justin'}, (error, foundMember) =>{
+			console.log(foundMember);
+			foundMember['wishlist'].push(req.body['petData']);
+		}); 
+	}); 
+
+	// var pet = new Pet(req.body['petData']);
+	// console.log(pet);
+	// console.log('===========================');
+	// console.log(req.body['petData']);
+	// console.log('===========================');
+	// console.log(req.session);
+	res.send('hello');
+
 });
 
 router.put('/:id', (req, res) => {

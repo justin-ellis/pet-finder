@@ -4,6 +4,7 @@ const app = angular.module('PetFinder', []);
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
 	let petArray = [];
+
 	this.getBreedList = function(){
 		$http({
 			method: 'POST',
@@ -29,9 +30,25 @@ app.controller('PetController', ['$http', function($http){
 	};
 
 	this.savePet = function(index){
-		console.log(petArray[index]);
+		// console.log(petArray[index]);
+		$http({
+			method: 'POST',
+			url: '/members/getPetData',
+			data: {
+				// user: 
+				petData: petArray[index]
+			}
+		}).then(
+		function(response){
+			console.log(response);
+		},
+		function(error){
+
+		});
+
 		// Member.wishlist.push(petArray[index]);
 	};
+
 		// console.log(index);
 		// $http({
 		// 	method: 'PUT',
@@ -60,4 +77,5 @@ app.controller('PetController', ['$http', function($http){
         function(error){
         });
     };
+    this.savePet(0);
 }]);

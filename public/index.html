@@ -13,7 +13,7 @@
     </head>
 
     <body ng-controller="PetController as petCtrl">
-
+<!--
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -74,7 +74,7 @@
         </div>
       </div>
 
-<!-- second section (body) -->
+ second section (body)
       <div class="row">
           <div class="col-sm-12">
               <div class="intro">
@@ -99,7 +99,7 @@
 
                 <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
 
-                <h3>Type in your zipcode to see animals available for adoption in your area!</h3>
+                <h3>Type in your zipcode to see animals available for adoption in your area!</h3> -->
                 <form ng-submit="petCtrl.getBreedList();">
                   zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
                              <input type="submit" value="submit">
@@ -113,9 +113,9 @@
                     Pictures: {{pets.media.photos}}
                   </li>
                 </ul>
-              </div>
+              <!-- </div>
             </div>
-          </div>
+          </div> -->
 
                   <!-- <form ng-submit="petCtrl.getSheltersWithBreeds();">
                                  Type of Animal: <input type="text" ng-model="petCtrl.animal" />
@@ -127,7 +127,7 @@
                                    zip: <input type="text" ng-model="petCtrl.zip" />
                                    <input type="text" value="Submit"/><br/><br/>
                                  </form> -->
-
+<!--
                                 <div class="images"
                                  <div class="row">
                                    <div class="col-sm-6 col-md-4">
@@ -153,16 +153,16 @@
                                   </div>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
 
 <!-- last section for footer -->
 
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-sm-12">
                                     <div class="footer"></div>
                                 </div>
                             </div>
-                          </div>
+                          </div> -->
 
               </body>
 </html>

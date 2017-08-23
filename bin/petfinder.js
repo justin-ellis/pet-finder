@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 
 // in env
 const apiKey = process.env.API_KEY
 const apiSecret = process.env.API_SECRET
 const petfinder = require('petfinder')(apiKey, apiSecret);
+=======
+// const apiKey = process.env.API_KEY
+// const apiSecret = process.env.API_SECRET
+
+const petfinder = require('petfinder')('37098abef8c6bba64b806723901d3d6a', '0e40dc8ff32b8f1be0cbfca13a15f5ed');
+>>>>>>> dev
 
 // const apiKey = process.env.API_KEY
 // const apiSecret = process.env.API_SECRET

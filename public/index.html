@@ -32,16 +32,17 @@
     Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
 
       <input type="submit" value="submit">
-
   </form>
 
 				<ul>
 		        <li ng-repeat='pets in petCtrl.pets'>
-		            Animal: {{pets.animal}}<br/>
 		            Name: {{pets.name}}<br/>
 		            Breed: {{pets.breeds}}<br/>
+                Pictures: <img ng-src="{{pets.media.photos['1']['pn']}}">
+              <button ng-click="petCtrl.showStoredData()">Save this pet</button>
 		        </li>
 		    </ul>
+
 
 </body>
 </html>

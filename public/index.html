@@ -7,6 +7,7 @@
       <title></title>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
       <script src="js/app.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
@@ -18,7 +19,7 @@
           <div class="col-sm-12">
               <div class="header">
                 <h1>Welcome to Pet Finder!</h1>
-                <div class="btn-group">
+                <div class="dropdown">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Adoption <span class="caret"></span>
                   </button>
@@ -98,7 +99,8 @@
 
                 <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
 
-                <form ng-submit="petCtrl.getBreedList()">
+                <h3>Type in your zipcode to see animals available for adoption in your area!</h3>
+                <form ng-submit="petCtrl.getBreedList();">
                   zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
                              <input type="submit" value="submit">
                 </form>
@@ -126,9 +128,10 @@
                                    <input type="text" value="Submit"/><br/><br/>
                                  </form> -->
 
+                                <div class="images"
                                  <div class="row">
                                    <div class="col-sm-6 col-md-4">
-                                     <div id="section1">
+                                     <div class="section">
                                        <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-responsive"/>
                                      </div>
                                  </div>
@@ -137,7 +140,7 @@
 
                               <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                  <div id="section2">
+                                  <div class="section">
                                     <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg?w=600&h=450" class="img-responsive"/>
                                   </div>
                               </div>
@@ -145,12 +148,12 @@
 
                               <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                  <div id="section3">
+                                  <div class="section">
                                     <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-responsive" />
                                   </div>
                               </div>
-                              </div>
-
+                            </div>
+                          </div>
 
 <!-- last section for footer -->
 
@@ -160,5 +163,6 @@
                                 </div>
                             </div>
                           </div>
+
               </body>
 </html>

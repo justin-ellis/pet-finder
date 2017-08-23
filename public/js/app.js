@@ -66,5 +66,5 @@ app.controller('PetController', ['$http', function($http){
     // const popup = document.getElementById("myPopup");
     // popup.classList.toggle("show");
     // }
-    console.log("onside controller");
+    console.log("inside controller");
 }]);

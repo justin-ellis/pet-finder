@@ -5,6 +5,9 @@
         min-height: 90px;
         border: blue 1px solid;
     }
+    h1, h2 {
+      font-family: 'Short Stack', cursive;
+    }
     .footer{
         min-height: 60px;
     }
@@ -22,13 +25,17 @@
     .loggin {
       border: green 1px solid;
     }
-    .section{
+    .images {
+      display: flex;
+      justify-content: center;
+    }
+    .section {
         min-height: 100px;
         border: purple 1px solid;
         /*padding: 20px;*/
-        overflow: hidden;
+        /*overflow: hidden;*/
         display: inline-block;
-        float: right;
+        float: none;
         /*background: #dbdfe5;*/
     }
 

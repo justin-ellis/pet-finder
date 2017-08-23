@@ -1,16 +1,17 @@
 const app = angular.module('PetFinder', []);
 
 app.controller('PetController', ['$http', function($http){
-  console.log("inside controller");
-    const controller = this;
-    // this.zip = "";
-    // this.animal = '';
-    this.getBreedList = function(){
-        $http({
-            method: 'POST',
-            url: '/pets/getBreedList',
+	const controller = this;
+
+	this.getBreedList = function(){
+		$http({
+			method: 'POST',
+			url: '/pets/getBreedList',
             data: {
-                zip: this.zip
+                zip: this.zip,
+								animal: this.animal,
+								breed: this.breed,
+								sex: this.sex
             }
         }).then(
         function(response){
@@ -65,4 +66,5 @@ app.controller('PetController', ['$http', function($http){
     // popup.classList.toggle("show");
     // }
     console.log("inside controller");
+
 }]);

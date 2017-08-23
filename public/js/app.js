@@ -2,7 +2,7 @@ const app = angular.module('PetFinder', []);
 
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
-
+	const petArray = [];
 	this.getBreedList = function(){
 		$http({
 			method: 'POST',
@@ -16,14 +16,23 @@ app.controller('PetController', ['$http', function($http){
             }
 		}).then(
 		function(response){
-			for (var i = 0; i < 24; i++) {
+			for (i = 0; i < 24; i++) {
 			console.log(response.data[i]);
+			petArray.push(response.data[i]);
+			
 			}
+  	console.log(petArray);
 			controller.pets = response.data;
 		},
 		function(error){
 		});
 	};
+
+// window.localStorage['petData'][i] = angular.toJson(response.data[i]);
+// 	this.showStoredData = function(){
+//         var storedData = window.localStorage['petData'][i];
+//         console.log(storedData);
+//     };
 
 	this.findShelter = function(){
         $http({

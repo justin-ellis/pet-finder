@@ -19,8 +19,6 @@ app.controller('PetController', ['$http', function($http){
 		function(response){
 			petArray = [];
 			for (i = 0; i < 24; i++) {
-			// console.log(response.data[i]);
-
 			petArray.push(response.data[i]);
 			
 			}
@@ -31,19 +29,21 @@ app.controller('PetController', ['$http', function($http){
 	};
 
 	this.savePet = function(index){
-
-		// Member.wishlist.push(petArray[index]);
 		console.log(petArray[index]);
-		console.log(index);
+		// Member.wishlist.push(petArray[index]);
 	};
+		// console.log(index);
+		// $http({
+		// 	method: 'PUT',
+		// 	url: '/members',
 
+		// }).then(
+  //       function(response){
+  //           console.log(response);
+  //       },
+  //       function(error){
+  //       });
 
-
-// window.localStorage['petData'][i] = angular.toJson(response.data[i]);
-// 	this.showStoredData = function(){
-//         var storedData = window.localStorage['petData'][i];
-//         console.log(storedData);
-//     };
 
 	this.findShelter = function(){
         $http({

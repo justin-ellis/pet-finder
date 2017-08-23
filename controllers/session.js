@@ -45,6 +45,7 @@ Member.create(memberDbEntry, (err, member)=>{
 	req.session.username = member.username;
 	req.session.zipcode = member.zipcode;
 	req.session.logged = true;
+	
 	});
 	res.redirect('/');
 });

@@ -1,92 +1,164 @@
 <!DOCTYPE html>
-<html ng-app="PetFinder">
-<head>
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-    <script src="/js/app.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+<html ng-app="PetFinder" lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+      <script src="js/app.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
 
-</head>
-<header>
-    <nav>
-<div>
-    <ul>
-    <li>
-        <a href="/session/login">Login</a>
-    </li>
-    <li>
-        <a href="/session/register">Register</a>
-    </li>
+    <body ng-controller="PetController as petCtrl">
 
-</div>
-</nav>
-</header>
-<body ng-controller="PetController as petCtrl">
-    <h1>Welcome to Pet Finder!</h1>
-    <button ng-click='petCtrl.getBreedList()'>Click Me</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="header">
+                <h1>Welcome to Pet Finder!</h1>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Adoption <span class="caret"></span>
+                  </button>
 
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Adopt your next pet now</a></li>
+                    <li><a href="#">Submit a wishlist for your desired pet</a></li>
+                    <li><a href="#">How to care for your new pet</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Look at map to see local shelters</a></li>
+                  </ul>
 
-     <form ng-submit="petCtrl.getSheltersWithBreeds();">
-                      <!-- Type of Animal: <input type="text" ng-model="petCtrl.animal" />
-                      Breed: <input type="text" ng-model="petCtrl.breed" />
-                      Size: <input type="text" ng-model="petCtrl.size" />
-                      Gender: <input type="text" ng-model="petCtrl.sex" />
-                      Age: <input type="text" ng-model="petCtrl.age" />
-                      Location: <input type="text" ng-model="petCtrl.location" />
-                      zip: <input type="text" ng-model="petCtrl.zip" /> -->
-                      <!-- <input type="text" value="Submit"/><br/><br/> -->
-                    </form>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Shelter Information <span class="caret"></span>
+                  </button>
 
 
-  <form ng-submit="petCtrl.getBreedList()">
-    zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
-      <input type="submit" value="submit">
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Find a shelter in your area</a></li>
+                    <li><a href="#">Fostering dogs and cats</a></li>
+                    <li><a href="#">Look through our articles</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/search/?location=austin%2C+texas&shelter_name=">Find pet adoption groups</a></li>
+                  </ul>
 
-  </form>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Volunteer <span class="caret"></span>
+                  </button>
 
-				<ul>
-		        <li ng-repeat='pets in petCtrl.pets'>
-		            Animal: {{pets.animal}}<br/>
-		            Name: {{pets.name}}<br/>
-		            Breed: {{pets.breeds}}<br/>
-		        </li>
-		    </ul>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">How to get started</a></li>
+                    <li><a href="#">Volunteer vacations</a></li>
+                    <li><a href="#">local adoption shelter contact</a></li>
+                    <li role="separator" class="divider"></li>
+                  </ul>
+                </div>
+              </div>
+
+              <nav>
+                <div class="loggin">
+
+                  <ul>
+                  <li>
+                      <a href="/session/login">Login</a>
+                  </li>
+                  <li>
+                      <a href="/session/register">Register</a>
+                  </li>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+<!-- second section (body) -->
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="intro">
+
+              <h2>All About Find A Pet</h2>
+                <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
+                  nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
+                  maintain their own home pages and available-pet databases. </p><br/>
+
+                <p>By utilizing the internet, we can: </p>
+
+                <ul>
+                  <li>Increase public awareness of the availability of high-quality adoptable pet</li>
+                  <li>ncrease the overall effectiveness of pet adoption programs across North America to the extent
+                      that the euthanasia of adoptable pets is eliminated</li>
+                  <li>Elevate the status of pets to that of family member</li>
+                </ul>
+
+                <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs.
+                    They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
+                    forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
+
+                <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
+
+                <form ng-submit="petCtrl.getBreedList()">
+                  zip input: <input ng-model="petCtrl.zip" type="text" value='submit'>
+                             <input type="submit" value="submit">
+                </form>
+
+                <ul>
+                  <li ng-repeat='pets in petCtrl.pets'>
+                    Animal: {{pets.animal}}<br/>
+                    Name: {{pets.name}}<br/>
+                    Breed: {{pets.breeds}}<br/>
+                    Pictures: {{pets.media.photos}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+                  <!-- <form ng-submit="petCtrl.getSheltersWithBreeds();">
+                                 Type of Animal: <input type="text" ng-model="petCtrl.animal" />
+                                   Breed: <input type="text" ng-model="petCtrl.breed" />
+                                   Size: <input type="text" ng-model="petCtrl.size" />
+                                   Gender: <input type="text" ng-model="petCtrl.sex" />
+                                   Age: <input type="text" ng-model="petCtrl.age" />
+                                   Location: <input type="text" ng-model="petCtrl.location" />
+                                   zip: <input type="text" ng-model="petCtrl.zip" />
+                                   <input type="text" value="Submit"/><br/><br/>
+                                 </form> -->
+
+                                 <div class="row">
+                                   <div class="col-sm-6 col-md-4">
+                                     <div id="section1">
+                                       <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-responsive"/>
+                                     </div>
+                                 </div>
+                               </div>
 
 
+                              <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                  <div id="section2">
+                                    <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg?w=600&h=450" class="img-responsive"/>
+                                  </div>
+                              </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                  <div id="section3">
+                                    <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-responsive" />
+                                  </div>
+                              </div>
+                              </div>
 
 
+<!-- last section for footer -->
 
-
-
-
-
-   <ul>
-                      <li ng-repeat="shelterInfo in petCtrl.shelterInfo">
-                        Name: {{shelterInfo.name}}<br/>
-                        About {{shelterInfo.name}}: {{shelterInfo.description}}<br/>
-                        {{shelterInfo.shelterId}}
-                        Adoption Shelter's Contact Info:
-<!--                         {{shelterInfo.contact[0].email}}<br/>
-                        {{shelterInfo.contact[0].phone}} -->
-                        </li>
-
-                    </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-<button ng-click='petCtrl.findPetListInZip(98335);'>zip</button>
-
-
-
-
-</body>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="footer"></div>
+                                </div>
+                            </div>
+                          </div>
+              </body>
 </html>

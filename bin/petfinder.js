@@ -1,9 +1,6 @@
-// in env
-const apiKey = process.env.API_KEY
-const apiSecret = process.env.API_SECRET
-const petfinder = require('petfinder')(apiKey, apiSecret);
+const petfinder = require('petfinder')('37098abef8c6bba64b806723901d3d6a', '0e40dc8ff32b8f1be0cbfca13a15f5ed');
 
-const getBreedList = (res, body, animal) => {
+const getBreedList = (res, body) => {
 
 
   // const response = (res, data) => {
@@ -23,6 +20,13 @@ petfinder.findPet(body.zip, test, function(err, pet) {
   res.send(pet);
 });
 };
+
+// const getBreeds = (res, body) => {
+
+// petfinder.getBreedList(body.animal, function(err, breeds) {
+// res.send(breeds);
+// });
+// };
 
 
 // petfinder.findShelter(27615, {'animal': 'dog','count':10}, function(err, pet) {

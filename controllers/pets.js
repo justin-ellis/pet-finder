@@ -3,6 +3,7 @@ const router = express.Router();
 const Pets = require('../models/pets.js');
 // const getBreeds = require('../bin/petfinder.js')
 const getBreedList = require('../bin/petfinder.js')
+const findShelter = require('../bin/petfinder.js')
 
 
 router.post('/getBreedList', (req, res)=>{
@@ -13,6 +14,15 @@ router.post('/getBreedList', (req, res)=>{
 	// 	res.json(foundPets);
 	// });
 });
+
+router.post('/findShelter', (req, res)=>{
+	console.log('req.body: ', req.body);
+	findShelter(res, req.body);
+});
+
+	// Pets.find({}, (err foundUsers)=>{
+	// 	res.json(foundPets);
+	// });
 
 // router.post('/getBreeds', (req, res)=>{
 // 	console.log('req.body: ', req.body);

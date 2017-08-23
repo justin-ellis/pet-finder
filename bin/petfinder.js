@@ -8,21 +8,33 @@ const petfinder = require('petfinder')(apiKey, apiSecret);
 
 const getBreedList = (res, body) => {
 
-const zippy = 98335;
+
 const test = {'count': 15}
 
 petfinder.findPet(body.zip, {'animal': body.animal, 'breed': body.breed, 'sex': body.sex, test}, function(err, pet) {
   res.send(pet);
 });
+
+
+
+
+
 };
 
+const findShelter = (res, body) =>{
+
+
+petfinder.findShelter(body.zippy, {}, function(err, shelter) {
+	res.send(shelter);
+});
+};
+module.exports = findShelter;
 // const getBreeds = (res, body) => {
 
 // petfinder.getBreedList(body.animal, function(err, breeds) {
 // res.send(breeds);
 // });
 // };
-
 
 module.exports = getBreedList;
 

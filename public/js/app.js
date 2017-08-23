@@ -21,4 +21,20 @@ app.controller('PetController', ['$http', function($http){
 		function(error){
 		});
 	};
+
+	this.findShelter = function(){
+		$http({
+			method: 'POST',
+			url: '/pets/findShelter',
+            data: {
+                zippy: this.zippy,
+            }
+		}).then(
+		function(response){
+			console.log(response);
+			controller.shelters = response.data;
+		},
+		function(error){
+		});
+	};
 }]);

@@ -53,25 +53,25 @@ router.post('/', (req, res)=>{
 	});
 });
 
-router.get('/new', (req, res) => {
-	res.render('members/new.ejs')
-})
+// router.get('/new', (req, res) => {
+// 	res.render('members/new.ejs')
+// })
 
 router.get('/:id', (req, res) => {
 	Member.findById(req.params.id, (error, Member) => {
-		res.render('members/show.ejs', {
+		res.render('views/members/show.ejs', {
 			member: Member
 		})
 	})
 })
 
-router.get('/:id/edit', (req, res) => {
-  Member.findById(req.params.id, (error, editMember) => {
-    res.render('members/edit.ejs', {
-			member: editMember
-    })
-  })
-})
+// router.get('/:id/edit', (req, res) => {
+//   Member.findById(req.params.id, (error, editMember) => {
+//     res.render('members/edit.ejs', {
+// 			member: editMember
+//     })
+//   })
+// })
 
 router.delete('/:id', (req, res) => {
 	Member.findByIdAndRemove(req.params.id, (error, foundMember) => {

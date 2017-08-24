@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
   <%# <body> //make sure to add petctrl.name as a variable to refer to%>
-      <h1>Welcome back {{petCtrl.userName}}!</h1>
+      <h1>Welcome back {{req.session.userName}}!</h1>
 
       <h2>Create an Adoption Wishlist</h2>
       <p>Is there a specific animal that you're hoping to see for adoption? Fill this out and if one becomes available
@@ -19,19 +19,17 @@
 
 
         <%# //what is location for mbr and pet? should we change this to zip%>
-      <form ng-submit="wishList();">
-        Type of Animal: <input type="text" ng-model="petCtrl.animal" />
-        Breed: <input type="text" ng-model="petCtrl.breed" />
-        Size: <input type="text" ng-model="petCtrl.size" />
-        Gender: <input type="text" ng-model="petCtrl.sex" />
-        Age: <input type="text" ng-model="petCtrl.age" />
-        Location: <input type="text" ng-model="petCtrl.location" />
-        <input type="submit" value="Submit"/><br/><br/>
+      <form ng-submit="savePet();">
+         <input type="text" ng-model="petCtrl.animal" placeholder="Type of Animal"/>
+         <input type="text" ng-model="petCtrl.breed" placeholder="Breed"/>
+         <input type="text" ng-model="petCtrl.size" placeholder="Size" />
+         <input type="text" ng-model="petCtrl.sex" placeholder="Gender"/>
+         <input type="text" ng-model="petCtrl.age" placeholder="Age"/>
+         <input type="text" ng-model="petCtrl.location" placeholder="Zipcode"/>
+          <input type="submit" value="Submit"/><br/><br/>
       </form>
 
-      <div class="message" ng-hide="petCtrl.toggle">
-        {{petCtrl.message}}
-      </div>
+
 
       <h2>Search for Pets</h2>
 
@@ -39,7 +37,7 @@
         Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
         Animal: <input ng-model='petCtrl.animal' type='text' value='submit'><br/>
         Breed: <input ng-model='petCtrl.breed' type='text' value='submit'><br/>
-        Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
+        Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M/F' value='submit'><br/>
         <input type="submit" value="submit">
       </form>
 

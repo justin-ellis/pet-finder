@@ -1,10 +1,10 @@
 body {
   background: #f5e6cc;
   font-family: 'Quicksand', sans-serif;
-  font-size: 15px;
+  /*font-size: 15px;*/
 }
 .row > div{
-        margin-bottom: 15px;
+        /*margin-bottom: 15px;*/
     }
 	.header{
         min-height: 90px;
@@ -24,7 +24,10 @@ body {
       color: #a64ac9;
     }
     .dropdown {
-      background-color: #a64ac9;
+      font-size: 12px;
+      font-family: 'Quicksand', sans-serif;
+
+      /*background-color: #a64ac9;*/
     }
     h2{
       font-family: 'Crushed', cursive;
@@ -32,6 +35,7 @@ body {
       letter-spacing: 1px;
       color: #a64ac9;
       text-align: center;
+      margin-top: 15px;
     }
     h3{
       font-size: 25px;
@@ -63,6 +67,8 @@ body {
     -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
        -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
             box-sizing: border-box;
+            border: ##17e9e0 solid .5;
+
 }
   .inputs {
 /*align-items: center;*/
@@ -72,22 +78,28 @@ body {
         height: 30px;
         font-size: 16px;
         color: #a64ac9;
-        display: inline-block;
-        border: none;
-        margin-top: -3px;
-        padding: 5px;
+        /*display: inline-block;*/
+        /*margin-top: -3px;*/
+        /*padding: 10px 0;*/
+        /*border: ##17e9e0 solid 1px;*/
       }
       .button, .btn {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 14px;
+        color: #a64ac9;
         background-color: #f5e6cc;
             background-repeat:no-repeat;
             border:none;
             cursor:pointer;
             overflow: hidden;
-            border:
+
             /*margin-left: 50px;*/
       }
 #mod-btn {
   background-color: #f5e6cc;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #a64ac9;
       background-repeat:no-repeat;
       border:none;
       cursor:pointer;
@@ -112,9 +124,11 @@ color: #a64ac9;
 }
     .footer{
         min-height: 60px;
+        margin-bottom: 0;
     }
     .header, .footer{
         background: #a64ac9;
+        z-index: 0;
     }
     .sidebar{
         /*background: #dbdfe5;*/
@@ -173,13 +187,48 @@ margin-left: 200px;
 /* Popover Body */
 .popover-content {
   font-family: 'Quicksand', sans-serif;
-    background-color: coral;
-    color: #ffb48f;
+    background-color: rgba(166, 74, 201, .08);
+    color: #a64ac9;
     padding: 25px;
     font-size: 22px;
+
+}
+/*.pop-text {
+  color: #a64ac9;
+  padding: 25px;
+  font-size: 22px;
+}*/
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
 }
 
+.fa:hover {
+    opacity: 0.7;
+}
 
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-pinterest {
+  background-color: red;
+  color: white;
+}
+.fa-envelope {
+  background: #3B5998;
+  color: white;
+}
     /*.clearfix::after {
     content: "";
     clear: both;

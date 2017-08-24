@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-
+    <a href="/">Home</a>
     <h1>stuff, things</h1>
   </body>
 </html>
@@ -17,7 +17,22 @@
   </body>
 </html>
     <h3><%=member.username%></h3>
-    <p>Zip Code: <%=member.zipcode%></p>
+    <p>Zip Code: <%=member.zipcode%></p> <br>
+
+<ul>
+    <% for (let i = 0; i  < member['wishlist'].length; i++) { %>
+      <li>
+      <%=member['wishlist'][i].name%><br>
+      <%=member['wishlist'][i].breeds%><br>
+      <%=member['wishlist'][i].sex%><br>
+      <img src='<%=member['wishlist'][i].media.photos['1']['pn']%>'>
+    <% } %>
+  </li>
+</ul>
+    <!-- <p>Pet Wishlist: <%=member['wishlist'][0].name%><p>
+
+      <%=member['wishlist'][0].breeds%> -->
+
 
     <a href='/members/<%=member.id%>/edit'>Edit Member</a>
 

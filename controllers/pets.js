@@ -2,8 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Pets = require('../models/pets.js');
 // const getBreeds = require('../bin/petfinder.js')
-const getBreedList = require('../bin/petfinder.js')
-const findShelter = require('../bin/petfinder.js')
+
+const getBreedList = require('../bin/petfinder.js');
+const findShelter = require('../bin/shelter.js');
+
 
 
 router.post('/getBreedList', (req, res)=>{
@@ -16,13 +18,11 @@ router.post('/getBreedList', (req, res)=>{
 });
 
 router.post('/findShelter', (req, res)=>{
-	console.log('req.body: ', req.body);
-	findShelter(res, req.body);
+
+    console.log('req.body: ', req.body);
+    findShelter(res, req.body);
 });
 
-	// Pets.find({}, (err foundUsers)=>{
-	// 	res.json(foundPets);
-	// });
 
 // router.post('/getBreeds', (req, res)=>{
 // 	console.log('req.body: ', req.body);
@@ -30,12 +30,12 @@ router.post('/findShelter', (req, res)=>{
 // });
 
 
-router.get('/getSheltersWithBreeds', (req, res)=>{
-	console.log('req.body: ', req.body);
-	getSheltersWithBreeds(res, req.body.zip,
-		req.body.animal);
+// router.get('/getSheltersWithBreeds', (req, res)=>{
+// 	console.log('req.body: ', req.body);
+// 	getSheltersWithBreeds(res, req.body.zip,
+// 		req.body.animal);
 
-});
+// });
 
 //start of get route for ishList function, nott sure if we will use or not
 // router.post("", (req, res)=>{

@@ -15,7 +15,7 @@ body {
     }
     h1 {
       font-family: 'Crushed', cursive;
-      font-size: 80px;
+      font-size: 65px;
       text-align: center;
       color: #f5e6cc;
     }
@@ -26,18 +26,34 @@ body {
     .dropdown {
       background-color: : #f5e6cc;
     }
-    h2, h3{
+    h2{
       font-family: 'Crushed', cursive;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 1px;
       color: #f5e6cc;
       text-align: center;
     }
+    #modal-txt{
+      font-size: 25px;
+      font-family: 'Crushed', cursive;
+      letter-spacing: 1px;
+      color: #f5e6cc;
+      margin-left: 0px;
+      margin-top:  30;
+
+    }
+    .form-1-background {
+      background-color: #17e9e0;
+    }
+    .form-2-background {
+      background-color: #fccd04;
+
+    }
 
     .form-1-background, .form-2-background {
-      background-color: #a64ac9;
       margin-top: 70px;
       text-align: center;
+
     }
   .form-1-background input textarea select button {
     width : 150px;
@@ -74,84 +90,38 @@ body {
         /*background: #dbdfe5;*/
     }
     .intro{
-        /*background: #7e8aa0;*/
         min-height: 250px;
-        border: red 1px solid;
-    }
-    .loggin {
-      border: green 1px solid;
-    }
-    .images {
-      display: flex;
-      justify-content: center;
-    }
-    .section {
-        min-height: 100px;
-        border: purple 1px solid;
-        /*padding: 20px;*/
-        /*overflow: hidden;*/
-        display: inline-block;
-        float: none;
-        /*background: #dbdfe5;*/
+        background: #a64ac9;
+        background-size: cover;
     }
 
+    .image1 {
+      float: right;
+      margin-right:30px;
+      margin-top: 20px;
+      padding-right: 0px;
+      border: #fccd04 solid 20px;
 
-    /*.statistic {
-      height: 150px;
-      background-color: #a64ac9;
-      margin-left: : 0;
-    }*/
-    /*.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;*/
-}
+    }
+    .image2 {
+      height:60%;
+      width: 60%;
+      margin-left: 30px;
+      border: #ffb48f solid 18px;;
+      margin-top: -125px;
 
-/* The actual popup */
-/*.popup .popuptext {
-visibility: hidden;
-width: 160px;
-background-color: #555;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 8px 0;
-position: absolute;
-z-index: 1;
-bottom: 125%;
-left: 50%;
-margin-left: -80px;
-}
-
-/* Popup arrow */
-/*.popup .popuptext::after {
-content: "";
-position: absolute;
-top: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-/*.popup .show {
-visibility: visible;
--webkit-animation: fadeIn 1s;
-animation: fadeIn 1s;*/
-/*}
-
-/* Add animation (fade in the popup) */
-/*@-webkit-keyframes fadeIn {
-from {opacity: 0;}
-to {opacity: 1;}
+    }
+    .image3 {
+      height: 50%;
+      width: 50%;
+      float: right;
+      margin-right: -190px;
+      margin-top: -175px;
+      border: #17e9e0 solid 14px;
+      /*padding-right: 0px;*/
+    }
+    /*.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }*/
-
-/*@keyframes fadeIn {
-from {opacity: 0;}
-to {opacity:1 ;}*/

@@ -1,6 +1,6 @@
 body {
   font-family: 'Quicksand', sans-serif;
-
+  font-size: 12px;
 }
 
 .row > div{
@@ -8,26 +8,67 @@ body {
     }
 	.header{
         min-height: 90px;
-        border: blue 1px solid;
+        width: 120%;
+        margin: 0 auto;
+        margin-left: -85px;
+        /*position: fixed;*/
     }
     h1 {
-      font-size: 65px;
-      font-weight: 600;
+      font-family: 'Crushed', cursive;
+      font-size: 80px;
       text-align: center;
+      color: #f5e6cc;
+    }
+    .btn  {
+      font-family: 'Quicksand', sans-serif;
+      color: #a64ac9;
+    }
+    .dropdown {
+      background-color: : #f5e6cc;
+    }
+    h2, h3{
+      font-family: 'Crushed', cursive;
+      font-size: 32px;
+      letter-spacing: 1px;
+      color: #f5e6cc;
+      text-align: center;
+    }
 
+    .form-1-background, .form-2-background {
+      background-color: #a64ac9;
+      margin-top: 70px;
+      text-align: center;
     }
-    h2 {
-      font-size: 35px;
-    }
-    .about {
-      font-size: 28px;
-      font-weight: 500;
-    }
+  .form-1-background input textarea select button {
+    width : 150px;
+    margin: 0;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+       -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+            box-sizing: border-box;
+}
+  .inputs {
+/*align-items: center;*/
+        font-family: 'Quicksand', sans-serif;
+        background-color:  #f5e6cc;
+        width: 160px;
+        height: 30px;
+        font-size: 16px;
+        color: #a64ac9;
+        display: inline-block;
+        border: none;
+      }
+      .button, .btn {
+        background-color: #f5e6cc;
+            background-repeat:no-repeat;
+            border:none;
+            cursor:pointer;
+            overflow: hidden;
+      }
     .footer{
         min-height: 60px;
     }
     .header, .footer{
-        /*background: #2f2f2f;*/
+        background: #a64ac9;
     }
     .sidebar{
         /*background: #dbdfe5;*/

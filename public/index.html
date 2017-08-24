@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
       <title></title>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-      <script src="js/app.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
@@ -110,8 +112,45 @@
           <div class="col-sm-12">
               <div class="intro">
 
-              <h2>All About Find A Pet</h2>
-                <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
+              <h2>To learn all about Find A Pet, click </h2>
+
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">HERE</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
+          nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
+          maintain their own home pages and available-pet databases.</p><br/>
+          <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs.
+              They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
+              forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
+          <p>Petfinder is updated DAILY. If you'd like to participate, please visit https://www.petfinder.com/ or email them at pets@petfinder.com.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+                <!-- <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
                   nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
                   maintain their own home pages and available-pet databases. </p><br/>
 
@@ -128,7 +167,7 @@
                     They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
                     forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
 
-                <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
+                <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p> -->
               </div>
             </div>
           </div>
@@ -164,7 +203,7 @@
                                    <input type="text" value="Submit"/><br/><br/>
                                  </form>
 
-                                <div class="images"
+                                <!-- <div class="images"
                                  <div class="row">
                                    <div class="col-sm-6 col-md-4">
                                      <div class="section">
@@ -189,7 +228,7 @@
                                   </div>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
 
 <!-- last section for footer -->
 
@@ -199,8 +238,9 @@
                                 </div>
                             </div>
                           </div>
-                          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-                          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+                          <script src="js/app.js"></script>
+                          <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+                          <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
               </body>
 </html>

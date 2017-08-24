@@ -7,7 +7,7 @@ const petSchema = mongoose.Schema({
   sex: String,
   age: String,
   location: String,
-  shelterId: String
+  shelterId: String,
 });
 
 const Pets = mongoose.model('Pet', petSchema);

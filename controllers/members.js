@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Member = require('../models/members.js');
+const Pet = require('../models/pets.js');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -13,6 +14,27 @@ router.get('/', (req, res)=>{
 			members:foundMembers
 		});
 	});
+});
+// store member id in session if you want to
+router.post('/getPetData', (req, res)=>{
+	Member.create(req.body['petData'], ()=>{
+		Member.findOne({'username':'123'}, (error, foundMember) =>{
+			foundMember['wishlist'].push(req.body['petData']);
+			foundMember.save();
+			console.log(foundMember['wishlist']);
+			console.log('==================')
+			console.log(req.body['petData']);
+		});
+	});
+
+	// var pet = new Pet(req.body['petData']);
+	// console.log(pet);
+	// console.log('===========================');
+	// console.log(req.body['petData']);
+	// console.log('===========================');
+	// console.log(req.session);
+	res.send('hello');
+
 });
 
 router.put('/:id', (req, res) => {
@@ -50,7 +72,13 @@ router.get('/:id/edit', (req, res) => {
 
 router.delete('/:id', (req, res) => {
 	Member.findByIdAndRemove(req.params.id, (error, foundMember) => {
-		res.redirect('/members');
+		req.session.destroy((err)=>{
+		if(err){
+
+		}else{
+			res.redirect('/');
+		}
+	});
 		});
 	})
 

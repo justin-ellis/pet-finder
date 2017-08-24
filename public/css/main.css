@@ -1,17 +1,16 @@
 body {
   background: #f5e6cc;
   font-family: 'Quicksand', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
 }
-
 .row > div{
         margin-bottom: 15px;
     }
 	.header{
         min-height: 90px;
-        width: 120%;
+        /*width: 120%;*/
         margin: 0 auto;
-        margin-left: -85px;
+        /*margin-left: -85px;*/
         /*position: fixed;*/
     }
     h1 {
@@ -166,6 +165,7 @@ margin-left: 200px;
 /* Popover Header */
 .popover-title {
     background-color: coral;
+    opacity: .4
 
 }
 

@@ -21,7 +21,7 @@ app.controller('PetController', ['$http', function($http){
 			petArray = [];
 			for (i = 0; i < 24; i++) {
 			petArray.push(response.data[i]);
-			
+
 			}
 			controller.pets = response.data;
 		},
@@ -35,7 +35,7 @@ app.controller('PetController', ['$http', function($http){
 			method: 'POST',
 			url: '/members/getPetData',
 			data: {
-				// user: 
+				// user:
 				petData: petArray[index]
 			}
 		}).then(
@@ -77,5 +77,5 @@ app.controller('PetController', ['$http', function($http){
         function(error){
         });
     };
-    this.savePet(0);
+    // this.savePet(0);
 }]);

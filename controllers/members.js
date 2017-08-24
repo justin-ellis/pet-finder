@@ -17,13 +17,15 @@ router.get('/', (req, res)=>{
 });
 // store member id in session if you want to
 router.post('/getPetData', (req, res)=>{
-	Pet.create(req.body['petData'], ()=>{
-		Member.findOne({'username':'Bob'}, (error, foundMember) =>{
+	Member.create(req.body['petData'], ()=>{
+		Member.findOne({'username':'123'}, (error, foundMember) =>{
 			foundMember['wishlist'].push(req.body['petData']);
-			foundMember.update();
-			console.log(foundMember);
-		}); 
-	}); 
+			foundMember.save();
+			console.log(foundMember['wishlist']);
+			console.log('==================')
+			console.log(req.body['petData']);
+		});
+	});
 
 	// var pet = new Pet(req.body['petData']);
 	// console.log(pet);

@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
       <title></title>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-      <script src="js/app.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Crushed|Quicksand:300,400,500,700" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
@@ -18,73 +21,61 @@
           <div class="col-sm-12">
               <div class="header">
                 <h1>Welcome to Pet Finder!</h1>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Adoption <span class="caret"></span>
-                  </button>
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Adoption <span class="caret"></span>
+                    </button>
 
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Adopt your next pet now</a></li>
-                    <li><a href="#">Submit a wishlist for your desired pet</a></li>
-                    <li><a href="#">How to care for your new pet</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Look at map to see local shelters</a></li>
-                  </ul>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Adopt your next pet now</a></li>
+                      <li><a href="#">Submit a wishlist for your desired pet</a></li>
+                      <li><a href="https://www.petfinder.com/pet-adoption/dog-adoption/the-pet-adoption-guide/">How to care for your new pet</a></li>
+                    </ul>
 
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Shelter Information <span class="caret"></span>
-                  </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Shelter Information <span class="caret"></span>
+                    </button>
 
 
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Find a shelter in your area</a></li>
-                    <li><a href="#">Fostering dogs and cats</a></li>
-                    <li><a href="#">Look through our articles</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/search/?location=austin%2C+texas&shelter_name=">Find pet adoption groups</a></li>
-                  </ul>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Find a shelter in your area</a></li>
+                      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
+                      <li><a href="#">Look through our articles</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/search/?location=austin%2C+texas&shelter_name=">Find pet adoption groups</a></li>
+                    </ul>
 
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Volunteer <span class="caret"></span>
-                  </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sign In <span class="caret"></span>
+                    </button>
 
-                  <ul class="dropdown-menu">
-                    <li><a href="#">How to get started</a></li>
-                    <li><a href="#">Volunteer vacations</a></li>
-                    <li><a href="#">local adoption shelter contact</a></li>
-                    <li role="separator" class="divider"></li>
-                  </ul>
+                    <ul class="dropdown-menu">
+                      <li><a href="/session/login">Log in</a></li>
+                      <li><a href="/session/register">Register to be a part of our community</a></li>
+                      <li role="separator" class="divider"></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <nav>
-                <div class="loggin">
-
-                  <ul>
-                  <li>
-                      <a href="/session/login">Login</a>
-                  </li>
-                  <li>
-                      <a href="/session/register">Register</a>
-                  </li>
-                  <li>
-                      <a href="/members">Members</a>
-                  </li>
-                  <li>
-                    <a href="/session/logout">Logout</a>
-                  </li>
-              </div>
-            </nav>
+            </div>
 
 
-  <h2>Search for Pets</h2>
-    <form ng-submit="petCtrl.getBreedList()">
-      Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
-      Animal: <input ng-model='petCtrl.animal' type='text' value='submit'><br/>
-      Breed: <input ng-model='petCtrl.breed' type='text' value='submit'><br/>
-      Gender: <input ng-model='petCtrl.sex' type='text' placeholder='Capital M or F' value='submit'><br/>
-      <input type="submit" value="submit">
-    </form>
+              <div class="row">
+              <div class="col-md-6">
+              <div class='form-1-background'>
+
+              <h2>Search for Pets</h2>
+                <form ng-submit="petCtrl.getBreedList()">
+                   <input class="inputs" ng-model="petCtrl.zip" type="text" placeholder=" Zip " value='submit'><br/>
+                   <input class="inputs" ng-model='petCtrl.animal' type='text' placeholder=" Animal " value='submit'><br/>
+                   <input class="inputs" ng-model='petCtrl.breed' type='text' placeholder=" Breed" value='submit'><br/>
+                   <input class="inputs"ng-model='petCtrl.sex' type='text' placeholder=' Gender: Capital M/F ' value='submit'><br/>
+                  <input class="button" type="submit" value="submit">
+                </form>
+            </div>
+
+
+  
 
 				<ul>
 		        <li ng-repeat='pets in petCtrl.pets'>
@@ -131,73 +122,132 @@
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6JL-diHV7EM3mSxVE2YvbDWH4Q4gBCZE&callback=initMap">
        </script> -->
 
+          <ul>
+              <li ng-repeat='pets in petCtrl.pets'>
+                  Name: {{pets.name}}<br/>
+                  Breed: {{pets.breeds}}<br/>
+                  <img ng-src="{{pets.media.photos['1']['pn']}}">
+                <button ng-click="petCtrl.showStoredData()">Save this pet</button>
+              </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="form-2-background">
+
+                <h2>Search for Shelters</h2>
+                 <form ng-submit="petCtrl.findShelter()">
+                   <input class="inputs" ng-model="petCtrl.zippy" type="text" placeholder=" Zip " value="submit">
+                   <input class="button" type="submit" submit="submit">
+                 </form>
+
+              </div>
+
+                <ul>
+                  <li ng-repeat="shelters in petCtrl.shelters">
+                    Shelter Name: {{shelters.name}}<br/>
+                    Phone: {{shelters.phone}}<br/>
+                    Email: {{shelters.email}}
+                   </li>
+                  </ul>
+                </div>
+              </div>
+
+
+ <!-- second section (body) -->
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="intro">
+
+                    <h3>To learn all about Find A Pet, click .</h3>
+
+                    <button id="mod-btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">HERE</button>
+
+<!-- Modal -->
+                      <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+    <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">A little about us</h4>
+                          </div>
+
+                <div class="modal-body">
+                  <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
+                    nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
+                    maintain their own home pages and available-pet databases.</p><br/>
+                    <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs.
+                        They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
+                        forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
+                    <p>Petfinder is updated DAILY. If you'd like to participate, please visit https://www.petfinder.com/ or email them at pets@petfinder.com.</p>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
           </div>
         </div>
       </div>
+    </div>
+</div>
 
-<!-- second section (body) -->
-      <div class="row">
-          <div class="col-sm-12">
-              <div class="intro">
+               <div class="row">
+                  <div class="col-md-4">
+                    <div class="image1">
+                      <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-circle"  width="324" height="256">
+                    </div>
+                    <a class="modal-text" data-toggle="popover" data-content="281,757 animals waiting to become part of your family">Did you know...</a>
+                    <script>
+                    $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();
+                    });
+                    </script>
+                  </div>
 
-              <h2>All About Find A Pet</h2>
-                <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
-                  nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
-                  maintain their own home pages and available-pet databases. </p><br/>
 
-                <p>By utilizing the internet, we can: </p>
+                  <div class="col-md-4">
+                    <div class="image2">
+                    <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle"  width="394" height="326">
+                    <a  data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA">In case you were wondering...</a>
+                    <script>
+                    $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();
+                    });
+                    </script>
+                    </div>
+                  </div>
 
-                <ul>
-                  <li>Increase public awareness of the availability of high-quality adoptable pet</li>
-                  <li>ncrease the overall effectiveness of pet adoption programs across North America to the extent
-                      that the euthanasia of adoptable pets is eliminated</li>
-                  <li>Elevate the status of pets to that of family member</li>
-                </ul>
-
-                <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs.
-                    They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
-                    forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
-
-                <p>Petfinder is updated DAILY. If you'd like to participate, please read more <a href="#">here.</a></p>
-
+                  <div class="col-md-4">
+                    <div class="image3">
+                      <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-circle" width="324" height="256" />
+                      <a class="clearfix" data-toggle="popover" data-content="we've found loving homes for 25 million pets!">In 20 years of Pet Finder...</a>
+                      <script>
+                      $(document).ready(function(){
+                      $('[data-toggle="popover"]').popover();
+                      });
+                      </script>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-
-                                 <div class="row">
-                                   <div class="col-sm-6 col-md-4">
-                                     <div id="section1">
-                                       <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-responsive"/>
-                                     </div>
-                                 </div>
-                               </div>
-
-
-                              <div class="row">
-                                <div class="col-sm-6 col-md-4">
-                                  <div id="section2">
-                                    <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg?w=600&h=450" class="img-responsive"/>
-                                  </div>
-                              </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-sm-6 col-md-4">
-                                  <div id="section3">
-                                    <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-responsive" />
-                                  </div>
-                              </div>
-                              </div>
 
 
 <!-- last section for footer -->
 
-                            <div class="row">
+                              <div class="row">
                                 <div class="col-sm-12">
                                     <div class="footer"></div>
                                 </div>
                             </div>
                           </div>
+
+                          <script src="js/app.js"></script>
+                          <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+                          <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
               </body>
 </html>

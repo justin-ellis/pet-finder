@@ -72,40 +72,18 @@
                    <input class="inputs"ng-model='petCtrl.sex' type='text' placeholder=' Gender: Capital M/F ' value='submit'><br/>
                   <input class="button" type="submit" value="submit">
                 </form>
+                <ul>
+        		        <li ng-repeat='pets in petCtrl.pets'>
+        		            Name: {{pets.name}}<br/>
+        		            Breed: {{pets.breeds}}<br/>
+                        <img ng-src="{{pets.media.photos['1']['pn']}}">
+                      <button ng-click="petCtrl.savePet($index)">Save this pet</button>
+                    </li>
+        		    </ul>
             </div>
 
 
-  
 
-				<ul>
-		        <li ng-repeat='pets in petCtrl.pets'>
-		            Name: {{pets.name}}<br/>
-		            Breed: {{pets.breeds}}<br/>
-                <img ng-src="{{pets.media.photos['1']['pn']}}">
-
-              <button ng-click="petCtrl.savePet($index)">Save this pet</button>
-
-
-
-
-
-
-		        </li>
-		    </ul>
-
-    <h2>Search for Shelters</h2>
-     <form ng-submit="petCtrl.findShelter()">
-       Zip: <input ng-model="petCtrl.zippy" type="text" value="submit">
-       <input type="submit" submit="submit">
-     </form>
-       <ul>
-         <li ng-repeat="shelters in petCtrl.shelters">
-           Shelter Name: {{shelters.name}}<br/>
-           Phone: {{shelters.phone}}<br/>
-           Email: {{shelters.email}}<br/>
-           {{shelters.latitude}}
-         </li>
-       </ul>
 
        <!-- <script>
          function initMap() {
@@ -124,14 +102,6 @@
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6JL-diHV7EM3mSxVE2YvbDWH4Q4gBCZE&callback=initMap">
        </script> -->
 
-          <ul>
-              <li ng-repeat='pets in petCtrl.pets'>
-                  Name: {{pets.name}}<br/>
-                  Breed: {{pets.breeds}}<br/>
-                  <img ng-src="{{pets.media.photos['1']['pn']}}">
-                <button ng-click="petCtrl.showStoredData()">Save this pet</button>
-              </li>
-          </ul>
         </div>
 
 
@@ -150,16 +120,16 @@
                    <input class="inputs" ng-model="petCtrl.zippy" type="text" placeholder=" Zip " value="submit">
                    <input class="button" type="submit" submit="submit">
                  </form>
+                 <ul>
+                   <li ng-repeat="shelters in petCtrl.shelters">
+                     Shelter Name: {{shelters.name}}<br/>
+                     Phone: {{shelters.phone}}<br/>
+                     Email: {{shelters.email}}<br/>
+                     {{shelters.latitude}}
+                   </li>
+                 </ul>
 
               </div>
-
-                <ul>
-                  <li ng-repeat="shelters in petCtrl.shelters">
-                    Shelter Name: {{shelters.name}}<br/>
-                    Phone: {{shelters.phone}}<br/>
-                    Email: {{shelters.email}}
-                   </li>
-                  </ul>
                 </div>
               </div>
 

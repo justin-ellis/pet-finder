@@ -1,4 +1,4 @@
-body {
+body, #page2{
   background: #f5e6cc;
   font-family: 'Quicksand', sans-serif;
   /*font-size: 15px;*/
@@ -6,7 +6,7 @@ body {
 .row > div{
         /*margin-bottom: 15px;*/
     }
-	.header{
+	.header, #page2{
         min-height: 90px;
         /*width: 120%;*/
         margin: 0 auto;
@@ -23,9 +23,10 @@ body {
       font-family: 'Quicksand', sans-serif;
       color: #a64ac9;
     }
-    .dropdown {
+    .dropdown-menu {
       font-size: 12px;
       font-family: 'Quicksand', sans-serif;
+      margin-bottom: 15px;
 
       /*background-color: #a64ac9;*/
     }

@@ -76,7 +76,7 @@
               </div>
             </nav>
 
-  
+
   <h2>Search for Pets</h2>
     <form ng-submit="petCtrl.getBreedList()">
       Zip: <input ng-model="petCtrl.zip" type="text" value='submit'><br/>
@@ -92,8 +92,8 @@
 		            Breed: {{pets.breeds}}<br/>
                 <img ng-src="{{pets.media.photos['1']['pn']}}">
               <button ng-click="petCtrl.savePet($index)">Save this pet</button>
-                  
-                 
+
+
 
 
 
@@ -109,7 +109,8 @@
          <li ng-repeat="shelters in petCtrl.shelters">
            Shelter Name: {{shelters.name}}<br/>
            Phone: {{shelters.phone}}<br/>
-           Email: {{shelters.email}}
+           Email: {{shelters.email}}<br/>
+           {{shelters.latitude}}
          </li>
        </ul>
 

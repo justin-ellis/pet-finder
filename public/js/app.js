@@ -16,6 +16,7 @@ app.controller('PetController', ['$http', function($http){
 								breed: this.breed,
 								sex: this.sex
             }
+
 		}).then(
 		function(response){
 			petArray = [];
@@ -28,6 +29,7 @@ app.controller('PetController', ['$http', function($http){
 		function(error){
 		});
 	};
+
 
 	this.savePet = function(index){
 		// console.log(petArray[index]);
@@ -62,6 +64,7 @@ app.controller('PetController', ['$http', function($http){
   //       });
 
 
+
 	this.findShelter = function(){
         $http({
             method: 'POST',
@@ -73,6 +76,7 @@ app.controller('PetController', ['$http', function($http){
         function(response){
             console.log(response);
             controller.shelters = response.data;
+
         },
         function(error){
         });

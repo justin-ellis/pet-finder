@@ -1,93 +1,187 @@
+body {
+  background: #f5e6cc;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+}
 .row > div{
         margin-bottom: 15px;
     }
 	.header{
         min-height: 90px;
-        border: blue 1px solid;
+        /*width: 120%;*/
+        margin: 0 auto;
+        /*margin-left: -85px;*/
+        /*position: fixed;*/
     }
+    h1 {
+      font-family: 'Crushed', cursive;
+      font-size: 65px;
+      text-align: center;
+      color: #f5e6cc;
+    }
+    .btn  {
+      font-family: 'Quicksand', sans-serif;
+      color: #a64ac9;
+    }
+    .dropdown {
+      background-color: #a64ac9;
+    }
+    h2{
+      font-family: 'Crushed', cursive;
+      font-size: 28px;
+      letter-spacing: 1px;
+      color: #a64ac9;
+      text-align: center;
+    }
+    h3{
+      font-size: 25px;
+      font-family: 'Crushed', cursive;
+      letter-spacing: 1px;
+      color: #f5e6cc;
+      margin-left: 55px;
+      margin-top:  50px;
+
+    }
+    .form-1-background {
+      background-color: #17e9e0;
+      min-height: 180px;
+    }
+    .form-2-background {
+      background-color: #fccd04;
+      min-height: 130px;
+
+    }
+
+    .form-1-background, .form-2-background {
+      margin-top: 70px;
+      text-align: center;
+
+    }
+  .form-1-background input textarea select button {
+    width : 150px;
+    margin: 0;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+       -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+            box-sizing: border-box;
+}
+  .inputs {
+/*align-items: center;*/
+        font-family: 'Quicksand', sans-serif;
+        background-color:  #f5e6cc;
+        width: 160px;
+        height: 30px;
+        font-size: 16px;
+        color: #a64ac9;
+        display: inline-block;
+        border: none;
+        margin-top: -3px;
+        padding: 5px;
+      }
+      .button, .btn {
+        background-color: #f5e6cc;
+            background-repeat:no-repeat;
+            border:none;
+            cursor:pointer;
+            overflow: hidden;
+            border:
+            /*margin-left: 50px;*/
+      }
+#mod-btn {
+  background-color: #f5e6cc;
+      background-repeat:no-repeat;
+      border:none;
+      cursor:pointer;
+      margin-left:  405px;
+      margin-top: -60px;
+}
+a {
+font-family: 'Crushed', cursive;
+color: #a64ac9;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 20px;
+  margin: 10px;
+}
+.modal-text {
+  font-family: 'Crushed', cursive;
+  color: #a64ac9;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px;
+    margin: 10px;
+}
     .footer{
         min-height: 60px;
     }
     .header, .footer{
-        /*background: #2f2f2f;*/
+        background: #a64ac9;
     }
     .sidebar{
         /*background: #dbdfe5;*/
     }
     .intro{
-        /*background: #7e8aa0;*/
         min-height: 250px;
-        border: red 1px solid;
-    }
-    .loggin {
-      border: green 1px solid;
-    }
-    .section{
-        min-height: 100px;
-        border: purple 1px solid;
-        /*padding: 20px;*/
-        overflow: hidden;
-        display: inline-block;
-        float: right;
-        /*background: #dbdfe5;*/
-    }
+        background: #a64ac9;
+        background-size: cover;
+        margin-top: -45px;
 
-    /*.statistic {
-      height: 150px;
-      background-color: #a64ac9;
-      margin-left: : 0;
+    }
+    /*.intro2 {
+      min-height: 250px;
+      min-height: 300px;
+      background: #17e9e0;
+      background-size: cover;
+      padding: -20px;
+      margin-top: -75px;
     }*/
-    /*.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;*/
+
+    .image1 {
+margin-top: -125px;
+
+
+    }
+    .image2 {
+
+      margin-top: -90px;
+
+
+    }
+    .image3 {
+
+      margin-top: -125px;
+      margin-right: 65px;
+
+   }
+   .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-/* The actual popup */
-/*.popup .popuptext {
-visibility: hidden;
-width: 160px;
-background-color: #555;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 8px 0;
-position: absolute;
-z-index: 1;
-bottom: 125%;
-left: 50%;
-margin-left: -80px;
+
+    .popover {
+margin-left: 200px;
 }
 
-/* Popup arrow */
-/*.popup .popuptext::after {
-content: "";
-position: absolute;
-top: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: #555 transparent transparent transparent;
+/* Popover Header */
+.popover-title {
+    background-color: coral;
+    opacity: .4
+
 }
 
-/* Toggle this class - hide and show the popup */
-/*.popup .show {
-visibility: visible;
--webkit-animation: fadeIn 1s;
-animation: fadeIn 1s;*/
-/*}
+/* Popover Body */
+.popover-content {
+  font-family: 'Quicksand', sans-serif;
+    background-color: coral;
+    color: #ffb48f;
+    padding: 25px;
+    font-size: 22px;
+}
 
-/* Add animation (fade in the popup) */
-/*@-webkit-keyframes fadeIn {
-from {opacity: 0;}
-to {opacity: 1;}
+
+    /*.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }*/
-
-/*@keyframes fadeIn {
-from {opacity: 0;}
-to {opacity:1 ;}*/

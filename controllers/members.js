@@ -20,9 +20,14 @@ router.post('/getPetData', (req, res)=>{
 	console.log('======================')
 	console.log(req.session.username);
 	Member.create(req.body['petData'], ()=>{
+
 		Member.findOne({'username': req.session.username}, (error, foundMember) =>{
-			foundMember['wishlist'].push(req.body['petData']);
-			foundMember.save();
+			if(req.session.logged = true){
+				foundMember['wishlist'].push(req.body['petData']);
+				foundMember.save();
+			} else {
+				alert('Idiot')
+			}
 			console.log('===================')
 			console.log(foundMember['wishlist']);
 			console.log('==================')

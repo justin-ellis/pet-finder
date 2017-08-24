@@ -40,7 +40,7 @@ app.controller('PetController', ['$http', function($http){
 			}
 		}).then(
 		function(response){
-			console.log(response);
+			// console.log(response);
 		},
 		function(error){
 

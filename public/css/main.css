@@ -87,21 +87,24 @@ body {
       background-repeat:no-repeat;
       border:none;
       cursor:pointer;
-      margin-left:  475px;
+      margin-left:  470px;
+      margin-top: -40px;
 }
 a {
 font-family: 'Crushed', cursive;
 color: #a64ac9;
   font-size: 25px;
   font-weight: 500;
-
+  padding: 20px;
+  margin: 10px;
 }
 .modal-text {
   font-family: 'Crushed', cursive;
   color: #a64ac9;
     font-size: 25px;
     font-weight: 500;
-    padding: 5px;
+    padding: 20px;
+    margin: 10px;
 }
     .footer{
         min-height: 60px;
@@ -129,28 +132,30 @@ color: #a64ac9;
     }*/
 
     .image1 {
+margin-top: -105px;;
 
-      float: right;
-      margin-right:30px;
-      margin-top: 20px;
-      padding-right: 0px;
 
     }
     .image2 {
 
-      margin-left: 30px;
-      margin-top: -125px;
+      margin-top: -70px;;
+
 
     }
     .image3 {
 
-      float: right;
-      margin-right: -375px;
-      margin-top: -175px;
+      margin-top: -105px;;
 
    }
-    .popover {
+   .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
+
+    .popover {
+margin-left: 200px;
 }
 
 /* Popover Header */

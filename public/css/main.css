@@ -31,7 +31,7 @@ body {
       font-family: 'Crushed', cursive;
       font-size: 28px;
       letter-spacing: 1px;
-      color: #f5e6cc;
+      color: #a64ac9;
       text-align: center;
     }
     h3{
@@ -90,11 +90,18 @@ body {
       margin-left:  475px;
 }
 a {
-  font-family: 'Quicksand', sans-serif;
-  color: #a64ac9;
+font-family: 'Crushed', cursive;
+color: #a64ac9;
   font-size: 25px;
   font-weight: 500;
 
+}
+.modal-text {
+  font-family: 'Crushed', cursive;
+  color: #a64ac9;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px;
 }
     .footer{
         min-height: 60px;
@@ -109,6 +116,7 @@ a {
         min-height: 250px;
         background: #a64ac9;
         background-size: cover;
+        margin-top: -45px;
 
     }
     /*.intro2 {
@@ -121,30 +129,26 @@ a {
     }*/
 
     .image1 {
+
       float: right;
       margin-right:30px;
       margin-top: 20px;
       padding-right: 0px;
-      border: #fccd04 solid 16px;
 
     }
     .image2 {
-      height:75%;
-      width: 75%;
+
       margin-left: 30px;
-      border: #ffb48f solid 14px;;
       margin-top: -125px;
 
     }
     .image3 {
-      height: 50%;
-      width: 50%;
+
       float: right;
-      margin-right: -190px;
+      margin-right: -375px;
       margin-top: -175px;
-      border: #17e9e0 solid 11px;
-      /*padding-right: 0px;*/
-    }
+
+   }
     .popover {
 
 }
@@ -161,7 +165,7 @@ a {
     background-color: coral;
     color: #ffb48f;
     padding: 25px;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 

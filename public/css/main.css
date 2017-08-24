@@ -74,7 +74,7 @@ body {
         color: #a64ac9;
         display: inline-block;
         border: none;
-        margin-top: 0px;
+        margin-top: -3px;
         padding: 5px;
       }
       .button, .btn {
@@ -83,6 +83,7 @@ body {
             border:none;
             cursor:pointer;
             overflow: hidden;
+            border:
             /*margin-left: 50px;*/
       }
 #mod-btn {

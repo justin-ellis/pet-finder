@@ -113,9 +113,9 @@
           <div class="col-sm-12">
               <div class="intro">
 
-              <h2 id="modal-txt">To learn all about Find A Pet, click </h2>
+              <h3>To learn all about Find A Pet, click here.</h3>
 
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">HERE</button>
+            <button id="mod-btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Click me</button>
 
 
 
@@ -152,9 +152,6 @@
   </div>
 </div>
 
-              </div>
-
-
               <!-- <div id="breedList">
                 <h3>Type in your zipcode to see animals available for adoption in your area!</h3>
                 <form ng-submit="petCtrl.getBreedList()">
@@ -187,14 +184,32 @@
                Email: {{shelters.email}}
              </li>
            </ul> -->
-
+<!-- 
                                <div class="row">
                                  <div class="col-md-6">
                                   <div class="image2">
                                     <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg?w=600&h=450" class="img-responsive"/>
+                                  </div> -->
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                     <div class="image2">
+                                    <h2>Rounded Corners</h2>
+                                    <p>The .img-rounded class adds rounded corners to an image (not available in IE8):</p>
+                                    <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">
+                                  </div>
+
+
+
+<a  data-toggle="popover" data-trigger="focus" data-content="281,757 animals waiting to become part of your family">Did you know...</a>
+<script>
+$(document).ready(function(){
+$('[data-toggle="popover"]').popover();
+});
+</script>
+
                                   </div>
                               </div>
-                              </div>
+
 
                               <div class="row">
                                 <div class="col-md-6">

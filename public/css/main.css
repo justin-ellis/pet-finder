@@ -1,4 +1,5 @@
 body {
+  background: #f5e6cc;
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
 }
@@ -33,13 +34,13 @@ body {
       color: #f5e6cc;
       text-align: center;
     }
-    #modal-txt{
+    h3{
       font-size: 25px;
       font-family: 'Crushed', cursive;
       letter-spacing: 1px;
       color: #f5e6cc;
-      margin-left: 0px;
-      margin-top:  30;
+      margin-left: 55px;
+      margin-top:  50px;
 
     }
     .form-1-background {
@@ -79,7 +80,22 @@ body {
             border:none;
             cursor:pointer;
             overflow: hidden;
+            /*margin-left: 50px;*/
       }
+#mod-btn {
+  background-color: #f5e6cc;
+      background-repeat:no-repeat;
+      border:none;
+      cursor:pointer;
+      margin-left:  475px;
+}
+a {
+  font-family: 'Quicksand', sans-serif;
+  color: #a64ac9;
+  font-size: 25px;
+  font-weight: 500;
+
+}
     .footer{
         min-height: 60px;
     }
@@ -93,21 +109,30 @@ body {
         min-height: 250px;
         background: #a64ac9;
         background-size: cover;
+
     }
+    /*.intro2 {
+      min-height: 250px;
+      min-height: 300px;
+      background: #17e9e0;
+      background-size: cover;
+      padding: -20px;
+      margin-top: -75px;
+    }*/
 
     .image1 {
       float: right;
       margin-right:30px;
       margin-top: 20px;
       padding-right: 0px;
-      border: #fccd04 solid 20px;
+      border: #fccd04 solid 16px;
 
     }
     .image2 {
-      height:60%;
-      width: 60%;
+      height:75%;
+      width: 75%;
       margin-left: 30px;
-      border: #ffb48f solid 18px;;
+      border: #ffb48f solid 14px;;
       margin-top: -125px;
 
     }
@@ -117,9 +142,29 @@ body {
       float: right;
       margin-right: -190px;
       margin-top: -175px;
-      border: #17e9e0 solid 14px;
+      border: #17e9e0 solid 11px;
       /*padding-right: 0px;*/
     }
+    .popover {
+
+}
+
+/* Popover Header */
+.popover-title {
+    background-color: coral;
+
+}
+
+/* Popover Body */
+.popover-content {
+  font-family: 'Quicksand', sans-serif;
+    background-color: coral;
+    color: #ffb48f;
+    padding: 25px;
+    font-size: 30px;
+}
+
+
     /*.clearfix::after {
     content: "";
     clear: both;

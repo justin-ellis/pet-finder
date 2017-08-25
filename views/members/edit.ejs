@@ -9,15 +9,32 @@
   <body>
 
     <div class='headings'>
-      <h1 >User Edit Page</h1>
-      <h2>Edit <%=member.username%></h2>
+     
+    <nav>
+<div>
+  <ul >
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="/members/<%=member.id%>"><%=member.username%></a>
+  </li>
+</ul>
+
+</div>
+</nav>
+      <h1>Edit <%=member.username%>'s Information:</h1>
     </div>
 
 
     <form action='/members/<%=member.id%>?_method=PUT' method="POST">
         Username: <input type="text" name="username" value='<%=member.username%>'>
-        Zip Code: <input type='text' name='zipcode' value='<%=member.zipcode%>'>
-        <input type="submit" value="Edit Member">
+       
+        <input class='delete' type="submit" value="Edit Member">
+    </form>
+
+    <form action='/members/<%=member.id%>?_method=DELETE' method='POST'>
+      <input class='delete' id="delete-btn"type='submit' value='Delete Member'/>
     </form>
 
   </body>

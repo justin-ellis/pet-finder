@@ -21,43 +21,32 @@
         <div class="row">
           <div class="col-sm-12">
               <div class="header">
-                <h1>Welcome to Pet Finder!</h1>
+                <h1>Welcome to Find A Pet!</h1>
+
                   <div class="dropdown">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Adoption <span class="caret"></span>
+                    
+
+                  
+                      
+                     
+
+              
+
+
+                     <button id="signin-btn"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Navigation <span class="caret"></span>
+             
                     </button>
 
                     <ul class="dropdown-menu">
-                      <li><a href="#">Adopt your next pet now</a></li>
-                      <li><a href="#">Submit a wishlist for your desired pet</a></li>
-                      <li><a href="https://www.petfinder.com/pet-adoption/dog-adoption/the-pet-adoption-guide/">How to care for your new pet</a></li>
-                    </ul>
-
-                    <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Shelter Information <span class="caret"></span>
-                    </button>
-
-
-
-                    <ul class="dropdown-menu">
-                      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
-
-                      <li><a href="#">Look through our articles</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/search/?location=austin%2C+texas&shelter_name=">Find pet adoption groups</a></li>
-                    </ul> -->
-
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Sign In <span class="caret"></span>
-                    </button>
-
-                    <ul class="dropdown-menu">
-                      <li><a href="/session/login">Log in</a></li>
                       <li><a href="/session/register">Register to be a part of our community</a></li>
+                      <li><a href="/session/login">Log in</a></li>
                       <li><a href='/members'>Members</a></li>
                       <li><a href='/session/logout'>Log Out</a></li>
+                      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
                       <li role="separator" class="divider"></li>
                     </ul>
+                <h5> <a class ='sessionLink' href="/session/register">Register</a> or <a class='sessionLink' href="/session/login">Log in</a> to enjoy Find A Pet!<h5>
                   </div>
                 </div>
               </div>
@@ -65,6 +54,8 @@
 
 <!--links  -->
 <!-- jug -->
+  
+    
 
               <div class="row">
               <div class="col-md-6">
@@ -73,7 +64,7 @@
               <h2>Search for Pets</h2>
                 <form ng-submit="petCtrl.getBreedList()">
                    <input class="inputs" ng-model="petCtrl.zip" type="text" placeholder=" Zip " value='submit'><br/>
-                   <input class="inputs" ng-model='petCtrl.animal' type='text' placeholder=" Animal (dog, cat, reptile, barnyard, etc)" value='submit'><br/>
+                   <input class="inputs" ng-model='petCtrl.animal' type='text' placeholder="Type: dog, cat, reptile, barnyard, bird, smallfurry" value='submit'><br/>
                    <input class="inputs" ng-model='petCtrl.breed' type='text' placeholder=" Breed" value='submit'><br/>
                    <input class="inputs"ng-model='petCtrl.sex' type='text' placeholder=' Gender: Capital M/F ' value='submit'><br/>
                   <input class="button" type="submit" value="submit">
@@ -87,36 +78,17 @@
                         <!-- <button ng-click='petCtrl.savePet($index)'>SDLKjf</button> -->
 
                         <img ng-src="{{pets.media.photos['1']['pn']}}">
+
                         <button ng-click="petCtrl.savePet($index)" type="button" class="btn btn-default">
                           <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Star
                         </button>
 
 
+
                     </li>
                 </ul>
             </div>
-
-
-
-       <!-- <script>
-         function initMap() {
-           var uluru = {lat: 40.563097, lng: -79.996151};
-           var map = new google.maps.Map(document.getElementById('map'), {
-             zoom: 4,
-             center: uluru
-           });
-           var marker = new google.maps.Marker({
-             position: uluru,
-             map: map
-           });
-         }
-       </script>
-       <script async defer
-       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6JL-diHV7EM3mSxVE2YvbDWH4Q4gBCZE&callback=initMap">
-       </script> -->
-
         </div>
-
 
         <div class="col-md-6">
             <div class="form-2-background">
@@ -161,12 +133,13 @@
                           </div>
 
                 <div class="modal-body">
-                  <p>Petfinder is an online, searchable database of animals who need homes. It is also a directory of
+                  <p>This website is made possible by using the API provided by the Petfinder organization. Petfinder is an online, searchable database of animals who need homes. It is also a directory of
                     nearly 14,000 animal shelters and adoption organizations across the U.S., Canada and Mexico. Organizations
                     maintain their own home pages and available-pet databases.</p><br/>
                     <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs.
                         They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion
                         forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.<p><br/>
+                        <p> Find A Pet's mission is to help our animal friends find the caretakers they need by being accessible in an easy to use database. After registering for the site, upon searching for a pet you may click the heart next to the pet to save it to your wishlist in order to see additional data including contact information. A wishlist may be accessed by going to the member's page directly or through the member's index.</p> <br/>
                     <p>Petfinder is updated DAILY. If you'd like to participate, please visit https://www.petfinder.com/ or email them at pets@petfinder.com.</p>
                 </div>
 

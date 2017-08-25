@@ -8,7 +8,7 @@ router.get('/login', (req, res)=>{
 });
 
 router.post('/login', (req, res)=>{
-	Member.findOne({zusername: req.body.username}, (err, user)=>{
+	Member.findOne({username: req.body.username}, (err, user)=>{
 if(user){
 	if(bcrypt.compareSync(req.body.password, user.password)){
 		req.session.message = "";

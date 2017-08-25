@@ -53,10 +53,6 @@ router.post('/', (req, res)=>{
 	});
 });
 
-router.get('/new', (req, res) => {
-	res.render('members/new.ejs')
-})
-
 router.get('/:id', (req, res) => {
 	Member.findById(req.params.id, (error, Member) => {
 		res.render('members/show.ejs', {
@@ -68,7 +64,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
   Member.findById(req.params.id, (error, editMember) => {
     res.render('members/edit.ejs', {
-			member: editMember
+            member: editMember
     })
   })
 })

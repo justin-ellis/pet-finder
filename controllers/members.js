@@ -75,7 +75,7 @@ router.delete('/:id', (req, res) => {
 		if(err){
 
 		}else{
-			res.redirect('/');
+			res.redirect('/members');
 		}
 	});
 		});

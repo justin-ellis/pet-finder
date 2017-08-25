@@ -40,3 +40,7 @@ button {
 h1 {
 	font-family: Quicksand;
 }
+.delete {
+  background-color: white;
+  border-radius: 9px;
+}

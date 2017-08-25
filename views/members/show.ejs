@@ -59,12 +59,19 @@
                     <ul class="dropdown-menu">
                       <li><a href="/session/register">Register to be a part of our community</a></li>
                       <li><a href="/session/login">Log in</a></li>
+                      <li><a href='/members'>Members</a></li>
+                      <li><a href='/session/logout'>Log Out</a></li>
+                      <li> <a href='/members/<%=member.id%>/edit'>Edit Profile</a></li>
+                      <li> <form action='/members/<%=member.id%>?_method=DELETE' method='POST'>
+      <a href='#'> <input id="delete-btn"type='submit' value='Delete Member'Delete Profile> </a>
+    </form></li>
                       <li role="separator" class="divider"></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+             <h2> <%=member.username%>'s Profile <h2><br>
           <% for (let i = 0; i  < member['wishlist'].length; i++) { %>
             <li><br>
             <%=member['wishlist'][i].name%><br>
@@ -78,6 +85,7 @@
           <% } %>
         </li>
       </ul><br>
+
 
     <a href='/members/<%=member.id%>/edit'>Edit Profile</a>
 

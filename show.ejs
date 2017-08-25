@@ -10,24 +10,41 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
-  <%# <body> //make sure to add petctrl.name as a variable to refer to%>
-      <h1>Welcome back {{req.session.userName}}!</h1>
+
+    <body id="page2" ng-controller="PetController as petCtrl">
+      <h1>Welcome back <%=member.username%>!</h1>
+
+      <p>Zip Code: <%=member.zipcode%></p> <br>
 
       <h2>Create an Adoption Wishlist</h2>
       <p>Is there a specific animal that you're hoping to see for adoption? Fill this out and if one becomes available
         close to you, we will reach out and let you know!</p>
 
 
-        <%# //what is location for mbr and pet? should we change this to zip%>
       <form ng-submit="savePet();">
          <input type="text" ng-model="petCtrl.animal" placeholder="Type of Animal"/>
          <input type="text" ng-model="petCtrl.breed" placeholder="Breed"/>
          <input type="text" ng-model="petCtrl.size" placeholder="Size" />
          <input type="text" ng-model="petCtrl.sex" placeholder="Gender"/>
          <input type="text" ng-model="petCtrl.age" placeholder="Age"/>
-         <input type="text" ng-model="petCtrl.location" placeholder="Zipcode"/>
-          <input type="submit" value="Submit"/><br/><br/>
+         <input type="text" ng-model="petCtrl.location" placeholder="Zipcode"/><br/><br/>
+        <%# <input type="submit" value="Submit"/><br/><br/>%>
+          <button type="submit" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          </button>
       </form>
+      <p>Click the heart icon to add this pet to your wishlist.</p>
+
+      <ul>
+          <% for (let i = 0; i  < member['wishlist'].length; i++) { %>
+            <li>
+            <%=member['wishlist'][i].name%><br>
+            <%=member['wishlist'][i].breeds%><br>
+            <%=member['wishlist'][i].sex%><br>
+            <img src='<%=member['wishlist'][i].media.photos['1']['pn']%>'>
+          <% } %>
+        </li>
+      </ul>
 
 
 
@@ -41,6 +58,15 @@
         <input type="submit" value="submit">
       </form>
 
+      <ul>
+          <li ng-repeat='pets in petCtrl.pets'>
+              Name: {{pets.name}}<br/>
+              Breed: {{pets.breeds}}<br/>
+              <img ng-src="{{pets.media.photos['1']['pn']}}">
+            <button ng-click="petCtrl.savePet($index)">Save this pet</button>
+          </li>
+      </ul>
+
       <h2>Search for Shelters</h2>
        <form ng-submit="petCtrl.findShelter()">
          Zip: <input ng-model="petCtrl.zippy" type="text" value="submit">
@@ -53,6 +79,12 @@
              Email: {{shelters.email}}
            </li>
          </ul>
+
+    <a href='/members/<%=member.id%>/edit'>Edit Profile</a>
+
+    <form action='/members/<%=member.id%>?_method=DELETE' method='POST'>
+      <input type='submit' value='Delete Member'/>
+    </form>
 
   </body>
 </html>

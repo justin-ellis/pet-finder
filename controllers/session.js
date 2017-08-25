@@ -16,7 +16,7 @@ if(user){
 		req.session.logged = true;
 		console.log(req.session);
 
-		res.redirect('views/members/show.ejs'); //added views/ in front of members to route correctly
+		res.redirect('/'); //added views/ in front of members to route correctly
 	} else {
 		console.log('else in bcrypt compare');
 		req.session.message = "Username or password is incorrect";

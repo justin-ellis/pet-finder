@@ -18,9 +18,9 @@ router.get('/', (req, res)=>{
 // store member id in session if you want to
 router.post('/getPetData', (req, res)=>{
 	console.log('======================')
-	console.log(req.session.username);
+	console.log(req.session);
 	Member.create(req.body['petData'], ()=>{
-		Member.findOne({'username': req.session.username}, (error, foundMember) =>{
+		Member.findOne({username: req.session.username}, (error, foundMember) =>{
 			foundMember['wishlist'].push(req.body['petData']);
 			foundMember.save();
 			console.log('===================')
@@ -53,10 +53,6 @@ router.post('/', (req, res)=>{
 	});
 });
 
-router.get('/new', (req, res) => {
-	res.render('members/new.ejs')
-})
-
 router.get('/:id', (req, res) => {
 	Member.findById(req.params.id, (error, Member) => {
 		res.render('members/show.ejs', {
@@ -68,7 +64,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
   Member.findById(req.params.id, (error, editMember) => {
     res.render('members/edit.ejs', {
-			member: editMember
+            member: editMember
     })
   })
 })

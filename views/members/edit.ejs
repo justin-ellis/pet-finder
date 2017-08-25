@@ -2,24 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Crushed|Quicksand:300,400,500,700" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="../../css/views.css">
+    <title>Edit User</title>
   </head>
   <body>
-    <h1>blah blah blah</h1>
-  </body>
-</html>
 
-    <h1>edit</h1>
-
-    <h1>User Edit Page</h1>
-  </body>
-</html>
-    <h1>Edit <%=member.username%></h1>
+    <div class='headings'>
+      <h1 >User Edit Page</h1>
+      <h2>Edit <%=member.username%></h2>
+    </div>
 
 
     <form action='/members/<%=member.id%>?_method=PUT' method="POST">
         Username: <input type="text" name="username" value='<%=member.username%>'>
-        Password: <input type="password" name="password">
         Zip Code: <input type='text' name='zipcode' value='<%=member.zipcode%>'>
         <input type="submit" value="Edit Member">
     </form>

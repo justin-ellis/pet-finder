@@ -16,7 +16,7 @@ if(user){
 		req.session.logged = true;
 		console.log(req.session);
 
-		res.redirect('/');
+		res.redirect('/'); //added views/ in front of members to route correctly
 	} else {
 		console.log('else in bcrypt compare');
 		req.session.message = "Username or password is incorrect";
@@ -41,13 +41,15 @@ memberDbEntry.zipcode = req.body.zipcode;
 
 Member.create(memberDbEntry, (err, member)=>{
 	console.log(member);
+	req.session.test = 'test';
 	req.session.message = "";
 	req.session.username = member.username;
 	req.session.zipcode = member.zipcode;
 	req.session.logged = true;
-	
+
+
 	});
-	res.redirect('/');
+	res.redirect('/session/login');
 });
 
 // Member.create(req.body, (err, createdMember)=>{
@@ -69,6 +71,7 @@ router.get('/logout', (req, res)=>{
 
 		}else{
 			res.redirect('/');
+			console.log
 		}
 	});
 });

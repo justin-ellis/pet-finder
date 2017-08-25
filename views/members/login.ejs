@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Crushed|Quicksand:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	<title></title>
 </head>
-<body>
+<body class='loginPage'>
 <header>
 	<nav>
 <div>
- 	<ul>
- 	<li>
- 		<a href="/">Home</a>
- 	</li>
+ 	<ul class='loginNav'>
+ 
  	<li>
  		<a href="/session/register">Register</a>
  	</li>
@@ -20,10 +20,9 @@
 </nav>
 </header>
 
-
+<div class='loginHeader'>
 <h2>Login</h2>
-<div>
-<form action="/session/login" method="POST">
+<form class='login' action="/session/login" method="POST">
    Username: <input type="text" name="username" value="">
    Password: <input type="password" name="password" value="">
    <button id="register">Login</button>

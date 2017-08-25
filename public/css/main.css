@@ -67,6 +67,12 @@ h3{
 
 
       }
+      /*#dropdown-btn,  {
+        margin-bottom: 15px;
+      }
+      #signin-btn {
+        margin-bottom: 15px;
+      }*/
       .button, .btn {
         font-family: 'Quicksand', sans-serif;
         font-size: 14px;
@@ -75,12 +81,7 @@ h3{
             background-repeat:no-repeat;
             border:none;
             cursor:pointer;
-            /*overflow: hidden;*/
-      }
-      .btn {
-        font-family: 'Quicksand', sans-serif;
-        color: #a64ac9;
-      }
+          }
 #mod-btn {
   background-color: #f5e6cc;
   font-family: 'Quicksand', sans-serif;
@@ -108,36 +109,28 @@ color: #a64ac9;
     padding: 20px;
     margin: 10px;
 }
+
     .footer{
         min-height: 60px;
         margin-bottom: 0;
+        width: 1170px;
+        text-align: center;
+        margin: 0 auto;
     }
     .header, .footer{
         background: #a64ac9;
-        z-index: 0;
     }
     .sidebar{
         /*background: #dbdfe5;*/
     }
-    .intro{
+  .intro{
         min-height: 250px;
         background: #a64ac9;
         background-size: cover;
         margin-top: -45px;
-
-    }
-    /*.intro2 {
-      min-height: 250px;
-      min-height: 300px;
-      background: #17e9e0;
-      background-size: cover;
-      padding: -20px;
-      margin-top: -75px;
-    }*/
-
-    .image1 {
-margin-top: -125px;
-
+  }
+.image1 {
+  margin-top: -125px;
     }
     .image2 {
       margin-top: -90px;
@@ -265,7 +258,7 @@ margin-left: 200px;
 }
 .btn {
   background-color: #f5e6cc;
-  border: #a64ac91px solid;
+  border: #a64ac9 1px solid;
   color: #a64ac9;
   font-size: 18px;
 }

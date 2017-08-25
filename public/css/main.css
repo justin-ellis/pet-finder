@@ -68,7 +68,8 @@ body {
 /*align-items: center;*/
         font-family: 'Quicksand', sans-serif;
         background-color:  #f5e6cc;
-        width: 160px;
+        width: 350px;
+        text-align: center;
         height: 30px;
         font-size: 16px;
         color: #a64ac9;

@@ -72,6 +72,13 @@
               </div>
             </div>
              <h2> <%=member.username%>'s Profile <h2><br>
+
+          <% if (member['wishlist'].length < 1) { %>
+                <p> <%=member.username%> hasn't added any pets to their wishlist. </p><br/>
+                <a href="/session/login"> Log in to add pets to your profile! </a>
+                <br/>
+                  <% } %>
+
           <% for (let i = 0; i  < member['wishlist'].length; i++) { %>
             <li><br>
             <%=member['wishlist'][i].name%><br>

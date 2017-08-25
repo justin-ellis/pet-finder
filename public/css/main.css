@@ -60,13 +60,16 @@ h3{
   .inputs {
         font-family: 'Quicksand', sans-serif;
         background-color:  #f5e6cc;
-        width: 160px;
+        width: 350px;
+        text-align: center;
         height: 30px;
         font-size: 16px;
         color: #a64ac9;
+}
 
 
-      }
+
+      
       .button, .btn {
         font-family: 'Quicksand', sans-serif;
         font-size: 14px;
@@ -77,10 +80,16 @@ h3{
             cursor:pointer;
             /*overflow: hidden;*/
       }
+
       .btn {
         font-family: 'Quicksand', sans-serif;
         color: #a64ac9;
+        display: inline-block;
+        border: 1px solid #A64AC9;
+        margin-top: -3px;
+        padding: 5px;
       }
+
 #mod-btn {
   background-color: #f5e6cc;
   font-family: 'Quicksand', sans-serif;
@@ -192,11 +201,54 @@ margin-left: 200px;
     opacity: 0.7;
 }
 
+
 /* Facebook */
 .fa-facebook {
     background: #3B5998;
     color: white;
 }
+
+#stuff {
+  list-style-type: none;
+}
+
+.petResults {
+  padding-top: 15px;
+  color: #a64ac9;
+  margin: auto;
+  font-weight: bold;
+}
+
+.login {
+  text-align: center;
+  text-decoration: none;
+  font-family: Quicksand;
+}
+
+.loginNav {
+  text-align: center;
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.loginNav a {
+  text-decoration: none;
+  font-family: Quicksand;
+  font-size: 15px;
+  display: inline;
+  position: relative;
+  right: 20px;
+}
+
+.loginNav li {
+  display: inline;
+}
+
+.loginPage {
+  text-align: center;
+}
+
 
 /* Twitter */
 .fa-twitter {

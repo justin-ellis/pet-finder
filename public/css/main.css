@@ -182,6 +182,8 @@ margin-left: 200px;
 
 #stuff {
   list-style-type: none;
+  position: relative;
+  right: 20px;
 }
 
 .petResults {
@@ -219,10 +221,6 @@ margin-left: 200px;
 
 .loginPage {
   text-align: center;
-}
-
-.shelter {
-  font-weight: bold;
 }
 
 

@@ -221,6 +221,10 @@ margin-left: 200px;
   text-align: center;
 }
 
+.shelter {
+  font-weight: bold;
+}
+
 
 
     /*.clearfix::after {

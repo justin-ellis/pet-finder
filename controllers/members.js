@@ -18,16 +18,11 @@ router.get('/', (req, res)=>{
 // store member id in session if you want to
 router.post('/getPetData', (req, res)=>{
 	console.log('======================')
-	console.log(req.session.username);
+	console.log(req.session);
 	Member.create(req.body['petData'], ()=>{
-
-		Member.findOne({'username': req.session.username}, (error, foundMember) =>{
-			if(req.session.logged = true){
-				foundMember['wishlist'].push(req.body['petData']);
-				foundMember.save();
-			} else {
-				alert('Idiot')
-			}
+		Member.findOne({username: req.session.username}, (error, foundMember) =>{
+			foundMember['wishlist'].push(req.body['petData']);
+			foundMember.save();
 			console.log('===================')
 			console.log(foundMember['wishlist']);
 			console.log('==================')

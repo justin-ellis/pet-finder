@@ -41,13 +41,15 @@ memberDbEntry.zipcode = req.body.zipcode;
 
 Member.create(memberDbEntry, (err, member)=>{
 	console.log(member);
+	req.session.test = 'test';
 	req.session.message = "";
 	req.session.username = member.username;
 	req.session.zipcode = member.zipcode;
 	req.session.logged = true;
 
+
 	});
-	res.redirect('/');
+	res.redirect('/session/login');
 });
 
 // Member.create(req.body, (err, createdMember)=>{
@@ -69,6 +71,7 @@ router.get('/logout', (req, res)=>{
 
 		}else{
 			res.redirect('/');
+			console.log
 		}
 	});
 });

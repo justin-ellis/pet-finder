@@ -223,12 +223,18 @@ margin-left: 200px;
  +++++++++++++++++++++++++++++++++*/
 
 #page2, body {
-    background: #f5e6cc;
-    font-family: 'Quicksand', sans-serif;
+  background-color: #f5e6cc;
+  font-family: 'Quicksand', sans-serif;
+
 }
-#page2, .header {
+/*#page2, .header {
   min-height: 90px;
   margin: 0 auto;
+}*/
+.welcome {
+  font-family: 'Crushed', cursive;
+  font-size: 45px;
+  text-align: center;
 }
 #page2, h1 {
   font-family: 'Crushed', cursive;
@@ -262,7 +268,9 @@ margin-left: 200px;
     min-height: 60px;
     margin-bottom: 0;
 }
-#page2, .header, .footer{
+/*#page2, .header{
     background: #a64ac9;
-    
 }
+#page2, .footer{
+  background: #a64ac9;
+}*/

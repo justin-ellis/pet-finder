@@ -74,17 +74,17 @@ body {
         font-size: 16px;
         color: #a64ac9;
         display: inline-block;
-        border: none;
+        border: 1px solid #A64AC9;
         margin-top: -3px;
         padding: 5px;
       }
       .button, .btn {
-        background-color: #f5e6cc;
+        background-color: #A64AC9;
             background-repeat:no-repeat;
             border:none;
             cursor:pointer;
             overflow: hidden;
-            border:
+            color: white;
             /*margin-left: 50px;*/
       }
 #mod-btn {
@@ -179,6 +179,48 @@ margin-left: 200px;
     padding: 25px;
     font-size: 22px;
 }
+
+#stuff {
+  list-style-type: none;
+}
+
+.petResults {
+  padding-top: 15px;
+  color: #a64ac9;
+  margin: auto;
+  font-weight: bold;
+}
+
+.login {
+  text-align: center;
+  text-decoration: none;
+  font-family: Quicksand;
+}
+
+.loginNav {
+  text-align: center;
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.loginNav a {
+  text-decoration: none;
+  font-family: Quicksand;
+  font-size: 15px;
+  display: inline;
+  position: relative;
+  right: 20px;
+}
+
+.loginNav li {
+  display: inline;
+}
+
+.loginPage {
+  text-align: center;
+}
+
 
 
     /*.clearfix::after {

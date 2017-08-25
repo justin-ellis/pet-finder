@@ -64,14 +64,18 @@
               </div>
             </div>
           <% for (let i = 0; i  < member['wishlist'].length; i++) { %>
-            <li>
+            <li><br>
             <%=member['wishlist'][i].name%><br>
             <%=member['wishlist'][i].breeds%><br>
-            <%=member['wishlist'][i].sex%><br>
-            <img src='<%=member['wishlist'][i].media.photos['1']['pn']%>'>
+            <%=member['wishlist'][i].sex%><br><br/>
+            <%=member['wishlist'][i].contact['phone']%><br>
+            <%=member['wishlist'][i].contact['address1']%><br>  <%=member['wishlist'][i].contact['city']%><br/>
+            <%=member['wishlist'][i].contact['state']%><br>
+            <img src='<%=member['wishlist'][i].media.photos['1']['pn']%>'><br/>
+            <%=member['wishlist'][i].description%><br/>
           <% } %>
         </li>
-      </ul>
+      </ul><br>
 
     <a href='/members/<%=member.id%>/edit'>Edit Profile</a>
 

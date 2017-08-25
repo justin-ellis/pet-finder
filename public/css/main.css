@@ -52,6 +52,12 @@ h3{
 
     }
 
+h5 {
+text-align: center;
+font-size: 30px;
+display: inline;
+margin-left: 8%;
+}
 
   .inputs {
         font-family: 'Quicksand', sans-serif;
@@ -163,11 +169,14 @@ margin-left: 200px;
   font-size: 22px;
 }*/
 .fa {
+  margin-bottom: 6px;
+  margin-top: 5px;
     padding: 20px;
-    font-size: 20px;
-    width: 30px;
+    font-size: 15px;
+    width: 49px;
     text-align: center;
     text-decoration: none;
+    border-radius: 40px;
 }
 
 .fa:hover {
@@ -179,6 +188,9 @@ margin-left: 200px;
 .fa-facebook {
     background: #3B5998;
     color: white;
+    border-radius: 48px;
+    height: 51px;
+
 }
 
 #stuff {
@@ -229,6 +241,10 @@ margin-left: 200px;
 .fa-twitter {
     background: #55ACEE;
     color: white;
+    border-radius: 48px;
+    height: 51px;
+
+    
 }
 .fa-pinterest {
   background-color: red;
@@ -237,6 +253,12 @@ margin-left: 200px;
 .fa-envelope {
   background: #3B5998;
   color: white;
+}
+
+.sessionLink {
+  font-size: 40px;
+  color: #f5e6cc;
+  font-weight: bold;
 }
     /*.clearfix::after {
     content: "";
@@ -295,4 +317,9 @@ margin-left: 200px;
   border: #a64ac9 1px solid;
   color: #a64ac9;
   font-size: 18px;
+}
+
+#register {
+  background-color: white;
+  border-radius: 8px;
 }

@@ -1,8 +1,12 @@
+Purpose
+************
 We wanted to make something that could be used autonomously once deployed. Additionally, we wanted to create
 an application that carried a little more weight in terms of making a societal difference. Something that 
 fell right in the bailiwick for us was helping animals get adopted. After comparing a few different API's, we 
 settled on Petfinder, which would allow us to search through pets as well as shelters.
 
+Functionality
+*************
 The ultimate goal was to allow users to search through the API and find animals that fit their preference. To 
 make it easier on the user, we allowed them to input the Zip Code as the main search but also broke it down
 by animal, breed and gender. In order to allow users to also quickly identify nearby shelters, we set up a 
@@ -21,6 +25,8 @@ in the pop-ups connected to the pictures at the bottom of the screen.
 Overall, we feel that we've made a tool that can help users through the pet adoption process. We also feel 
 that our site is pretty intuitive and should be easy to navigate. 
 
+If We Had More Time
+*******************
 While we are happy with the site itself, there are some things we would be interested in addressing if given 
 more time.
 

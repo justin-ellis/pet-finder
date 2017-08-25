@@ -28,8 +28,7 @@
                     </button>
 
                     <ul class="dropdown-menu">
-                      <li><a href="#">Adopt your next pet now</a></li>
-                      <li><a href="#">Submit a wishlist for your desired pet</a></li>
+                      
                       <li><a href="https://www.petfinder.com/pet-adoption/dog-adoption/the-pet-adoption-guide/">How to care for your new pet</a></li>
                     </ul>
 
@@ -37,13 +36,13 @@
                       Shelter Information <span class="caret"></span>
                     </button>
 
-
                     <ul class="dropdown-menu">
-                      <li><a href="#">Find a shelter in your area</a></li>
+            
+
                       <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
-                      <li><a href="#">Look through our articles</a></li>
+                      
                       <li role="separator" class="divider"></li>
-                      <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/search/?location=austin%2C+texas&shelter_name=">Find pet adoption groups</a></li>
+                      
                     </ul>
 
                      <button id="signin-btn"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,10 +82,16 @@
         		            Name: {{pets.name}}<br/>
         		            Breed: {{pets.breeds}}<br/>
 
+                        <!-- <button ng-click='petCtrl.savePet($index)'>SDLKjf</button> -->
+
                         <img ng-src="{{pets.media.photos['1']['pn']}}">
-                        <button ng-click="petCtrl.get"type="button" class="btn btn-default">
-                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+
+                        <button ng-click="petCtrl.savePet($index)" type="button" class="btn btn-default">
+                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Star
                         </button>
+
+
+
                     </li>
                 </ul>
             </div>
@@ -102,7 +107,7 @@
                    <input class="button" type="submit" submit="submit">
                  </form><br/>
                  <ul id='stuff'>
-                   <li ng-repeat="shelters in petCtrl.shelters">
+                   <li class='shelter' ng-repeat="shelters in petCtrl.shelters">
                      Shelter Name: {{shelters.name}}<br/>
                      Phone: {{shelters.phone}}<br/>
                      Email: {{shelters.email}}<br/><br>

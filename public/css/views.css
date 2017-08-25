@@ -31,3 +31,12 @@ button {
 	background-color: white;
 	border-radius: 9px;
 }
+
+.headings {
+	color: #A64AC9;
+	font-family: Crushed;
+}
+
+h1 {
+	font-family: Quicksand;
+}

@@ -61,6 +61,14 @@ router.get('/:id', (req, res) => {
 	})
 })
 
+router.get('/:id/edit', (req, res) => {
+  Member.findById(req.params.id, (error, editMember) => {
+    res.render('members/edit.ejs', {
+            member: editMember
+    })
+  })
+})
+
 router.delete('/:id', (req, res) => {
 	Member.findByIdAndRemove(req.params.id, (error, foundMember) => {
 		req.session.destroy((err)=>{

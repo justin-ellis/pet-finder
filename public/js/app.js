@@ -83,4 +83,49 @@ app.controller('PetController', ['$http', function($http){
     };
     // this.savePet(0);
 
+    this.getMembers = function(){
+			$http({
+				method: 'GET',
+				url: '/members',
+				data: {
+					username: this.username
+				}
+			}).then(
+			function(response){
+				console.log(response.data.username);
+				controller.currentMember = response.data.username;
+			},
+			function(err){
+				console.log(err);
+			});
+		};
+
+		this.registerUser = function(username, password){
+		$http({
+			method: 'POST',
+			url: '/session/register',
+			data: {
+				username: this.registeredUsername,
+				password: this.registeredPassword
+			}
+		}).then(
+		function(response){
+			controller.registeredUsername = '';
+			controller.registeredPassword = '';
+			controller.newUser = response.data;
+			console.log(response.data);
+			controller.getMembers();
+
+			if(response.data){
+				controller.currentMember = controller.username;
+				controller.loggedIn = true;
+			}
+		},
+		function(err){
+			console.log(err);
+		});
+				this.getMembers();
+	};
+
+
 }]);

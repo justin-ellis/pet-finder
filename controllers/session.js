@@ -71,7 +71,6 @@ router.get('/logout', (req, res)=>{
 
 		}else{
 			res.redirect('/session/login');
-			console.log
 		}
 	});
 });

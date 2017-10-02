@@ -7,6 +7,12 @@ router.get('/login', (req, res)=>{
 	res.render('members/login.ejs', {message: req.session.message || ""});
 });
 
+router.get('/', (req, res, next)=>{
+	Member.find({}, (err, foundMembers)=>{
+		res.json(foundMembers);
+	});
+});
+
 router.post('/login', (req, res)=>{
 	Member.findOne({username: req.body.username}, (err, user)=>{
 if(user){
@@ -14,17 +20,18 @@ if(user){
 		req.session.message = "";
 		req.session.username = req.body.username;
 		req.session.logged = true;
+		res.json(req.session.logged);
 		console.log(req.session);
-
-		res.redirect('/'); //added views/ in front of members to route correctly
+		// res.redirect('/'); //added views/ in front of members to route correctly
 	} else {
 		console.log('else in bcrypt compare');
 		req.session.message = "Username or password is incorrect";
-		res.redirect('/session/login');
+		res.json(req.session.message);
 	}
 } else {
+	console.log('else else in bcrypt compare');
 	req.session.message = "Username or password is incorrect";
-	res.redirect('/session/login');
+	res.json(req.session.message);
 	}
 
 	});
@@ -46,10 +53,11 @@ Member.create(memberDbEntry, (err, member)=>{
 	req.session.username = member.username;
 	req.session.zipcode = member.zipcode;
 	req.session.logged = true;
+	res.json(req.session.logged);
 
 
 	});
-	res.redirect('/session/login');
+	// res.redirect('/session/login');
 });
 
 // Member.create(req.body, (err, createdMember)=>{

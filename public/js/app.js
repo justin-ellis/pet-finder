@@ -4,6 +4,7 @@ const app = angular.module('PetFinder', []);
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
 	let petArray = [];
+	this.currentMember = "";
 
 	this.getBreedList = function(){
 		$http({
@@ -125,6 +126,34 @@ app.controller('PetController', ['$http', function($http){
 			console.log(err);
 		});
 				this.getMembers();
+	};
+
+	this.login = function(username, password){
+		var deferred = $q.defer();
+		$http({
+			method: 'POST',
+			url: '/session/login',
+			data: {
+				username: this.username,
+				password: this.password,
+			}
+		}).then(
+		function(response){
+			controller.username = "";
+			controller.password = "";
+			controller.getMembers();
+			if(response.data != true){
+				console.log('wrong username or password');
+				controller.loggedIn = false;
+			}
+			else if(response.data){
+				controller.currentMember = controller.username;
+			}
+		},
+		function(err){
+			console.log(err);
+		});
+
 	};
 
 

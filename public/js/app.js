@@ -129,7 +129,6 @@ app.controller('PetController', ['$http', function($http){
 	};
 
 	this.login = function(username, password){
-		var deferred = $q.defer();
 		$http({
 			method: 'POST',
 			url: '/session/login',

@@ -16,6 +16,28 @@
     </head>
 
     <body ng-controller="PetController as petCtrl">
+      
+      <div class="form-group container">
+        
+    <form ng-submit="ctrl.login()">
+      <h4>Log In</h4>
+         <input class="form-control" type="text" placeholder="Username" ng-model="ctrl.username"/> <br>
+        <input class="form-control" type="password" placeholder="Password" ng-model="ctrl.password"/> <br>
+        <hr>
+      <input class="btn btn-info" type="submit" value="Log in"/>
+    </form>
+      
+    <br/>
+  
+    <form ng-submit="ctrl.registerUser()">
+      <h4>Register</h4>
+      <input class="form-control" type="text" placeholder="Username" ng-model="ctrl.registeredUsername"/> <br>
+      <input class="form-control" type="password" placeholder="Password" ng-model="ctrl.registeredPassword"/> <br>
+      <hr>
+      <input class="btn btn-success" type="submit" value="Register"/>
+    </form>      
+      </div>
+
 
       <div class="container">
         <div class="row">

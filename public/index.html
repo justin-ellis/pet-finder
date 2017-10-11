@@ -19,7 +19,7 @@
       
 
    <!-- login / register    -->
-      <div class="form-group container">
+      <div ng-if="ctrl.showLogin" class="form-group container">
         
     <form ng-submit="ctrl.login()">
       <h4>Log In</h4>
@@ -28,9 +28,12 @@
         <hr>
       <input class="btn btn-info" type="submit" value="Log in"/>
     </form>
-      
+      </div>
+
     <br/>
   
+      <div ng-if="ctrl.showRegistration" class="form-group container">
+
     <form ng-submit="ctrl.registerUser()">
       <h4>Register</h4>
       <input class="form-control" type="text" placeholder="Username" ng-model="ctrl.registeredUsername"/> <br>
@@ -38,7 +41,8 @@
       <hr>
       <input class="btn btn-success" type="submit" value="Register"/>
     </form>      
-      </div>
+  </div>
+      
 
 
       <div class="container">

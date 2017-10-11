@@ -5,6 +5,8 @@ app.controller('PetController', ['$http', function($http){
 	const controller = this;
 	let petArray = [];
 	this.currentMember = "";
+	this.showLogin = true;
+	this.showRegistration = true;
 
 	this.getBreedList = function(){
 		$http({
@@ -31,6 +33,13 @@ app.controller('PetController', ['$http', function($http){
 		});
 	};
 
+	this.toggleLogin = function(){
+		this.showLogin = !this.showLogin;
+	};
+
+	this.toggleRegistration = function(){
+		this.showRegistration = !this.showRegistration;
+	};
 
 	this.savePet = function(index){
 		// console.log(petArray[index]);
@@ -120,6 +129,7 @@ app.controller('PetController', ['$http', function($http){
 			if(response.data){
 				controller.currentMember = controller.username;
 				controller.loggedIn = true;
+				controller.toggleRegistration();
 			}
 		},
 		function(err){
@@ -147,6 +157,7 @@ app.controller('PetController', ['$http', function($http){
 			}
 			else if(response.data){
 				controller.currentMember = controller.username;
+				controller.toggleLogin();
 			}
 		},
 		function(err){

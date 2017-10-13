@@ -1,3 +1,4 @@
+
 Purpose
 ************
 We wanted to make something that could be used autonomously once deployed. Additionally, we wanted to create
@@ -56,3 +57,4 @@ understand they currently overlap one another. Given more time, we would allevia
 to just logged in users. We've noticed that some of these features break the page when not logged in. This is
 something we feel we could fix given time. At the very least, we would be able to implement Passport to allow
 for a more secure network.
+

@@ -4,6 +4,9 @@ const app = angular.module('PetFinder', []);
 app.controller('PetController', ['$http', function($http){
 	const controller = this;
 	let petArray = [];
+	this.currentMember = "";
+	this.showLogin = false;
+	this.showRegistration = false;
 
 	this.getBreedList = function(){
 		$http({
@@ -30,6 +33,13 @@ app.controller('PetController', ['$http', function($http){
 		});
 	};
 
+	this.toggleLogin = function(){
+		this.showLogin = !this.showLogin;
+	};
+
+	this.toggleRegistration = function(){
+		this.showRegistration = !this.showRegistration;
+	};
 
 	this.savePet = function(index){
 		// console.log(petArray[index]);
@@ -82,5 +92,79 @@ app.controller('PetController', ['$http', function($http){
         });
     };
     // this.savePet(0);
+
+    this.getMembers = function(){
+			$http({
+				method: 'GET',
+				url: '/members',
+				data: {
+					username: this.username
+				}
+			}).then(
+			function(response){
+				console.log(response.data.username);
+				controller.currentMember = response.data.username;
+			},
+			function(err){
+				console.log(err);
+			});
+		};
+
+		this.registerUser = function(username, password){
+		$http({
+			method: 'POST',
+			url: '/session/register',
+			data: {
+				username: this.registeredUsername,
+				password: this.registeredPassword
+			}
+		}).then(
+		function(response){
+			controller.registeredUsername = '';
+			controller.registeredPassword = '';
+			controller.newUser = response.data;
+			console.log(response.data);
+			controller.getMembers();
+
+			if(response.data){
+				controller.currentMember = controller.username;
+				controller.loggedIn = true;
+				controller.toggleRegistration();
+			}
+		},
+		function(err){
+			console.log(err);
+		});
+				this.getMembers();
+	};
+
+	this.login = function(username, password){
+		$http({
+			method: 'POST',
+			url: '/session/login',
+			data: {
+				username: this.username,
+				password: this.password,
+			}
+		}).then(
+		function(response){
+			controller.username = "";
+			controller.password = "";
+			controller.getMembers();
+			if(response.data != true){
+				console.log('wrong username or password');
+				controller.loggedIn = false;
+			}
+			else if(response.data){
+				controller.currentMember = controller.username;
+				controller.toggleLogin();
+			}
+		},
+		function(err){
+			console.log(err);
+		});
+
+	};
+
 
 }]);

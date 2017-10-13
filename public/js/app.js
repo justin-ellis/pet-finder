@@ -5,8 +5,8 @@ app.controller('PetController', ['$http', function($http){
 	const controller = this;
 	let petArray = [];
 	this.currentMember = "";
-	this.showLogin = true;
-	this.showRegistration = true;
+	this.showLogin = false;
+	this.showRegistration = false;
 
 	this.getBreedList = function(){
 		$http({

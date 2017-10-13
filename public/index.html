@@ -19,29 +19,6 @@
       
 
    <!-- login / register    -->
-      <div ng-if="ctrl.showLogin" class="form-group container-fluid">
-        
-    <form ng-submit="ctrl.login()">
-      <h4>Log In</h4>
-         <input class="form-control" type="text" placeholder="Username" ng-model="ctrl.username"/> <br>
-        <input class="form-control" type="password" placeholder="Password" ng-model="ctrl.password"/> <br>
-        <hr>
-      <input class="btn btn-info" type="submit" value="Log in"/>
-    </form>
-      </div>
-
-    <br/>
-  
-      <div ng-if="ctrl.showRegistration" class="form-group container">
-
-    <form ng-submit="ctrl.registerUser()">
-      <h4>Register</h4>
-      <input class="form-control" type="text" placeholder="Username" ng-model="ctrl.registeredUsername"/> <br>
-      <input class="form-control" type="password" placeholder="Password" ng-model="ctrl.registeredPassword"/> <br>
-      <hr>
-      <input class="btn btn-success" type="submit" value="Register"/>
-    </form>      
-  </div>
       
 
 
@@ -66,11 +43,34 @@
                       <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
                       <li role="separator" class="divider"></li>
                     </ul>
-                <h5> <a class ='sessionLink' href="/session/register">Register</a> or <a class='sessionLink' href="/session/login">Log in</a> to enjoy Find A Pet!<h5>
+                <h5> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a> to enjoy Find A Pet!<h5>
                   </div>
                 </div>
               </div>
             </div>
+      <div class="form-group container-fluid">
+        
+    <form ng-show="petCtrl.showLogin" ng-submit="petCtrl.login()">
+      <h4>Log In</h4>
+         <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.username"/> <br>
+        <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.password"/> <br>
+        <hr>
+      <input class="btn btn-info" type="submit" value="Log in"/>
+    </form>
+      </div>
+
+    <br/>
+  
+      <div class="form-group container">
+
+    <form ng-show="petCtrl.showRegistration" ng-submit="petCtrl.registerUser()">
+      <h4>Register</h4>
+      <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.registeredUsername"/> <br>
+      <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.registeredPassword"/> <br>
+      <hr>
+      <input class="btn btn-success" type="submit" value="Register"/>
+    </form>      
+  </div>
 
 <!--links  -->
       
@@ -96,7 +96,7 @@
 
                         <img ng-src="{{pets.media.photos['1']['pn']}}">
 
-                        <button ng-if="ctrl.loggedIn" ng-click="petCtrl.savePet($index)" type="button" class="btn btn-default">
+                        <button ng-if="petCtrl.loggedIn" ng-click="petCtrl.savePet($index)" type="button" class="btn btn-default">
                           <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Add
                         </button>
 

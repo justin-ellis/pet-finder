@@ -43,7 +43,7 @@
                       <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
                       <li role="separator" class="divider"></li>
                     </ul>
-                <h5> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a> to enjoy Find A Pet!<h5>
+                <h5 ng-if="!petCtrl.loggedIn"> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a> to enjoy Find A Pet!</h5>
 
                   <div ng-if="petCtrl.currentMember">Hello {{petCtrl.currentMember}}!!</div>
                   </div>

@@ -29,7 +29,7 @@
                 <h1>Welcome to Find A Pet!</h1>
 
                 <div class='welcome'>
-                  <h5> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a> to enjoy Find A Pet!<h5>
+                  <h4> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a><h4>
                 </div><br>
 
                   <div class="dropdown">
@@ -58,7 +58,7 @@
          <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.username"/> <br>
         <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.password"/> <br>
         <hr>
-      <input class="btn btn-info" type="submit" value="Login"/>
+      <input class='login-button' class="btn btn-info" type="submit" value="Login"/>
     </form>
       </div>
 
@@ -71,7 +71,7 @@
       <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.registeredUsername"/> <br>
       <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.registeredPassword"/> <br>
       <hr>
-      <input class="btn btn-success" type="submit" value="Register"/>
+      <input class='login-button' class="btn btn-success" type="submit" value="Register"/>
     </form>
   </div>
 
@@ -223,65 +223,33 @@
 
       </div>
     </div>
+  </div>
+</div>
 </div>
 
-               <!-- <div class="row">
-                  <div class="col-md-4">
-                    <div class="image1">
-                      <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-circle"  width="324" height="256">
-                    </div>
-                    <a class="modal-text" data-toggle="popover" data-content="281,757 animals waiting to become part of your family">Did you know...</a>
-                    <script>
-                    $(document).ready(function(){
-                    $('[data-toggle="popover"]').popover();
-                    });
-                    </script>
-                  </div>
-
-
-                  <div class="col-md-4">
-                    <div class="image2">
-                    <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle"  width="394" height="326">
-                    <a  data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA">In case you were wondering...</a>
-                    <script>
-                    $(document).ready(function(){
-                    $('[data-toggle="popover"]').popover();
-                    });
-                    </script>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="image3">
-                      <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-circle" width="324" height="256" />
-                      <a class="clearfix" data-toggle="popover" data-content="we've found loving homes for 25 million pets!">In 20 years of Pet Finder...</a>
-                      <script>
-                      $(document).ready(function(){
-                      $('[data-toggle="popover"]').popover();
-                      });
-                      </script>
-                    </div>
-                  </div> -->
-                </div>
-              </div>
-            </div>
 
 
 <!-- last section for footer -->
 
-                              <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="footer">
-                                      <a href="https://www.facebook.com/Petfinder" class="fa fa-facebook"></a>
-                                      <a href="https://twitter.com/Petfinder" class="fa fa-twitter"></a>
-                                      <a href="https://www.pinterest.com/petfinder/" class="fa fa-Pinterest"></a>
-                                      <span id="poweredBy">Powered By PetFinder</span>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
+<div class="footer">
+  <div class='container'>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class='icons'>
+        <a href="https://www.facebook.com/Petfinder" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/Petfinder" class="fa fa-twitter"></a>
+        <a href="https://www.pinterest.com/Petfinder" class="fa fa-pinterest"></a>
+      </div>
+      </div>
+      <div class='col'>
+        <span id="poweredBy">Powered By PetFinder</span>
+      </div>
+    </div>
+  </div>
+  </div>
 
-                          <script src="/js/app.js"></script>
-              </body>
 
-              </html>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

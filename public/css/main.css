@@ -75,7 +75,7 @@ h3{
   width: 35vw;
   margin: 0 auto;
   text-align: center;
-  color: #a64ac9;
+  /*color: #a64ac9;*/
 }
 
 @media(max-width: 600px){
@@ -85,6 +85,16 @@ h3{
 }
 .login h4 {
   text-align: center;
+}
+
+.login-button {
+  background-color: #a64ac9;
+  color: #f5e6cc;
+}
+
+.register-button{
+  background-color: #a64ac9;
+  color: #f5e6cc;
 }
 
 
@@ -151,7 +161,6 @@ color: #a64ac9;
     .footer{
         min-height: 60px;
         margin-bottom: 0;
-        width: 1170px;
         text-align: center;
         margin: 0 auto;
     }
@@ -302,15 +311,27 @@ margin-left: 200px;
     color: white;
     border-radius: 48px;
     height: 51px;
-
-
 }
 .fa-pinterest {
   background-color: red;
   color: white;
+  border-radius: 48px;
+  height: 51px;
 }
 .fa-envelope {
   background: #3B5998;
+  color: white;
+}
+
+.icons a {
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer span{
   color: white;
 }
 

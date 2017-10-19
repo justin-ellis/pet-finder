@@ -97,11 +97,12 @@ display: inline;
   .inputs {
         font-family: 'Quicksand', sans-serif;
         background-color:  #f5e6cc;
-        width: 360px;
+        /*width: 360px;*/
         text-align: center;
         height: 30px;
         font-size: 16px;
         color: #a64ac9;
+        width:65%
 }
       .button, .btn {
         font-family: 'Quicksand', sans-serif;

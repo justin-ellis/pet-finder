@@ -72,10 +72,16 @@ h3{
     }
 
 .login input {
-  width: 25vw;
+  width: 35vw;
   margin: 0 auto;
   text-align: center;
   color: #a64ac9;
+}
+
+@media(max-width: 600px){
+  .login input {
+    width: 50vw;
+  }
 }
 .login h4 {
   text-align: center;

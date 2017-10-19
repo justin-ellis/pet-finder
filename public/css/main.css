@@ -11,13 +11,29 @@ h1 {
   font-size: 65px;
   text-align: center;
   color: #f5e6cc;
+  padding-top: 0px;
 }
+
+.welcome {
+  position: relative;
+  left: -13px;
+}
+@media(max-width:420px){
+  .welcome{
+    position: relative;
+    left: 2.5px;
+  }
+}
+
 .dropdown-menu {
   font-size: 12px;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 15px;
   background-color: #f5e6cc;
   color:  #a64ac9;
+  /*text-align: center;
+  position: relative;
+  left: 35%;*/
 }
 h2{
   font-family: 'Crushed', cursive;
@@ -33,12 +49,15 @@ h3{
       letter-spacing: 1px;
       color: #f5e6cc;
       margin-left: 55px;
-      margin-top:  50px;
-
+      margin-top:  10px;
+      padding-top: 15px;
+      position: relative;
+      left: -35px;
     }
     .form-1-background {
       background-color: #17e9e0;
       min-height: 180px;
+      padding-bottom: 4px;
     }
     .form-2-background {
       background-color: #fccd04;
@@ -56,7 +75,12 @@ h5 {
 text-align: center;
 font-size: 30px;
 display: inline;
-margin-left: 8%;
+/*margin-left: 8%;*/
+}
+
+.searches .row{
+  margin-top: -50px;
+  margin-bottom: 50px;
 }
 
   .inputs {
@@ -71,8 +95,9 @@ margin-left: 8%;
       .button, .btn {
         font-family: 'Quicksand', sans-serif;
         font-size: 14px;
-        color: #a64ac9;
-        background-color: #f5e6cc;
+        color: #f5e6cc;
+        margin-top: 10px;
+        background-color: #a64ac9;
             background-repeat:no-repeat;
             border:none;
             cursor:pointer;
@@ -85,8 +110,8 @@ margin-left: 8%;
       background-repeat:no-repeat;
       border:none;
       cursor:pointer;
-      margin-left:  405px;
-      margin-top: -60px;
+      margin-left: 0px;
+      margin-top: -50px;
 }
 a {
 font-family: 'Crushed', cursive;
@@ -98,7 +123,7 @@ color: #a64ac9;
 }
 .modal-text {
   font-family: 'Crushed', cursive;
-  color: #a64ac9;
+  color: #fccd04;
     font-size: 25px;
     font-weight: 500;
     padding: 20px;
@@ -123,18 +148,34 @@ color: #a64ac9;
         background: #a64ac9;
         background-size: cover;
         margin-top: -45px;
+        margin-bottom: 20px;
   }
+
+.intro h3 {
+  text-align: center;
+}
+
+.intro h2{
+  color: #f5e6cc;
+  padding-top: 10px;
+}
 .image1 {
-  margin-top: -125px;
-    }
-    .image2 {
-      margin-top: -90px;
-    }
-    .image3 {
+  text-align: center;
+  }
+.image2 {
+  text-align: center;
+  }
+@media(max-width:475px){
+  .image2 {
+    width:80%;
+  }
+}
+.image3 {
+  text-align: center;
 
-      margin-top: -125px;
-      margin-right: 65px;
-
+   }
+   .clearfix {
+     color: #fccd04;
    }
    .clearfix::after {
     content: "";
@@ -244,7 +285,7 @@ margin-left: 200px;
     border-radius: 48px;
     height: 51px;
 
-    
+
 }
 .fa-pinterest {
   background-color: red;

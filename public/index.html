@@ -16,10 +16,10 @@
     </head>
 
     <body ng-controller="PetController as petCtrl">
-      
+
 
    <!-- login / register    -->
-      
+
 
 
       <div class="container-fluid">
@@ -28,11 +28,15 @@
               <div class="header">
                 <h1>Welcome to Find A Pet!</h1>
 
+                <div class='welcome'>
+                  <h5> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a> to enjoy Find A Pet!<h5>
+                </div><br>
+
                   <div class="dropdown">
-              
+
                      <button id="signin-btn"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Navigation <span class="caret"></span>
-             
+
                     </button>
 
                     <ul class="dropdown-menu">
@@ -43,13 +47,12 @@
                       <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
                       <li role="separator" class="divider"></li>
                     </ul>
-                <h5> <a ng-click="petCtrl.toggleRegistration()" class ='sessionLink'>Register</a> or <a ng-click="petCtrl.toggleLogin()" class='sessionLink'>Log in</a> to enjoy Find A Pet!<h5>
                   </div>
                 </div>
               </div>
             </div>
       <div class="form-group container-fluid">
-        
+
     <form ng-show="petCtrl.showLogin" ng-submit="petCtrl.login()">
       <h4>Log In</h4>
          <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.username"/> <br>
@@ -60,7 +63,7 @@
       </div>
 
     <br/>
-  
+
       <div class="form-group container">
 
     <form ng-show="petCtrl.showRegistration" ng-submit="petCtrl.registerUser()">
@@ -69,11 +72,11 @@
       <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.registeredPassword"/> <br>
       <hr>
       <input class="btn btn-success" type="submit" value="Register"/>
-    </form>      
+    </form>
   </div>
 
 <!--links  -->
-      
+            <div class='searches'>
               <div class="row">
               <div class="col-md-6">
               <div class='form-1-background'>
@@ -92,7 +95,7 @@
         		            Name: {{pets.name}}<br/>
         		            Breed: {{pets.breeds}}<br/>
 
-                    
+
 
                         <img ng-src="{{pets.media.photos['1']['pn']}}">
 
@@ -113,7 +116,7 @@
 <!--shelter search  -->
                 <h2>Search for Shelters</h2>
                  <form ng-submit="petCtrl.findShelter()">
-                   <input class="inputs" ng-model="petCtrl.zippy" type="text" placeholder=" Zip " value="submit">
+                   <input class="inputs" ng-model="petCtrl.zippy" type="text" placeholder=" Zip " value="submit"><br>
                    <input class="button" type="submit" submit="submit">
                  </form><br/>
                  <ul id='stuff'>
@@ -127,6 +130,7 @@
               </div>
                 </div>
               </div>
+            </div>
 
 
  <!-- second section (body) -->
@@ -135,9 +139,10 @@
               <div class="col-sm-12">
                   <div class="intro">
 
-                    <h3>To learn all about Find A Pet, click .</h3>
+                    <h2>Additional Information</h2>
+                    <h3>About Find-A-Pet<br> <br><button id="mod-btn" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Click HERE</button> </h3>
 
-                    <button id="mod-btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">HERE</button>
+                    <!-- <button id="mod-btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">HERE</button> -->
 
 <!-- Modal -->
                       <div id="myModal" class="modal fade" role="dialog">
@@ -167,11 +172,60 @@
               </div>
           </div>
         </div>
+
+        <div class="row">
+           <div class="col-md-4">
+             <div class="image1">
+               <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-circle"  width="324" height="256">
+             </div>
+             <a class="modal-text" data-toggle="popover" data-content="281,757 animals waiting to become part of your family">Did you know...</a>
+             <script>
+             $(document).ready(function(){
+             $('[data-toggle="popover"]').popover();
+             });
+             </script>
+           </div>
+
+
+           <div class="col-md-4">
+             <div class="image2">
+             <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle"  width="394" height="326">
+             <a class='modal-text' data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA">In case you were wondering...</a>
+             <script>
+             $(document).ready(function(){
+             $('[data-toggle="popover"]').popover();
+             });
+             </script>
+             </div>
+           </div>
+
+           <div class="col-md-4">
+             <div class="image3">
+               <img src="https://s-media-cache-ak0.pinimg.com/originals/27/e6/b9/27e6b92482185b791ab4539e66bd9434.jpg" class="img-circle" width="324" height="256" />
+               <a class="clearfix" data-toggle="popover" data-content="we've found loving homes for 25 million pets!">In 20 years of Pet Finder...</a>
+               <script>
+               $(document).ready(function(){
+               $('[data-toggle="popover"]').popover();
+               });
+               </script>
+             </div>
+           </div>
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
 </div>
 
-               <div class="row">
+               <!-- <div class="row">
                   <div class="col-md-4">
                     <div class="image1">
                       <img src="https://irp-cdn.multiscreensite.com/94f3e251/dms3rep/multi/desktop/01-pug%20%28325%20x%20244%29__1436816936_73-325x244.17.32.39.jpg" class="img-circle"  width="324" height="256">
@@ -207,7 +261,7 @@
                       });
                       </script>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

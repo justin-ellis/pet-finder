@@ -53,12 +53,12 @@
             </div>
       <div class="form-group container-fluid">
 
-    <form ng-show="petCtrl.showLogin" ng-submit="petCtrl.login()">
+    <form class='login' ng-show="petCtrl.showLogin" ng-submit="petCtrl.login()">
       <h4>Log In</h4>
          <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.username"/> <br>
         <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.password"/> <br>
         <hr>
-      <input class="btn btn-info" type="submit" value="Log in"/>
+      <input class="btn btn-info" type="submit" value="Login"/>
     </form>
       </div>
 
@@ -66,7 +66,7 @@
 
       <div class="form-group container">
 
-    <form ng-show="petCtrl.showRegistration" ng-submit="petCtrl.registerUser()">
+    <form class='login' ng-show="petCtrl.showRegistration" ng-submit="petCtrl.registerUser()">
       <h4>Register</h4>
       <input class="form-control" type="text" placeholder="Username" ng-model="petCtrl.registeredUsername"/> <br>
       <input class="form-control" type="password" placeholder="Password" ng-model="petCtrl.registeredPassword"/> <br>

@@ -18,11 +18,20 @@ h1 {
   position: relative;
   left: -13px;
 }
+
+.welcome a {
+  color: #17e9e0;
+  font-size: 30px;
+}
 @media(max-width:420px){
   .welcome{
     position: relative;
     left: 2.5px;
   }
+}
+
+.dropdown {
+  text-align: center;
 }
 
 .dropdown-menu {
@@ -31,10 +40,40 @@ h1 {
   margin-bottom: 15px;
   background-color: #f5e6cc;
   color:  #a64ac9;
-  /*text-align: center;
-  position: relative;
-  left: 35%;*/
+  text-align: center;
+  left: 40%;
 }
+
+@media(max-width:1200px){
+  .dropdown-menu{
+    left: 37.5%;
+  }
+}
+
+@media(max-width:900px){
+  .dropdown-menu{
+    left: 35%;
+  }
+}
+
+@media(max-width:600px){
+  .dropdown-menu{
+    left: 25%;
+  }
+}
+
+@media(max-width:400px){
+  .dropdown-menu{
+    left: 10%;
+    width: 80%;
+    font-size: 8px;
+  }
+  .dropdown-menu a{
+    font-size: 20px;
+  }
+  }
+
+.dropdown-menu
 h2{
   font-family: 'Crushed', cursive;
   font-size: 28px;
@@ -97,6 +136,25 @@ h3{
   color: #f5e6cc;
 }
 
+.shelterResults {
+  margin-bottom: 30px;
+}
+.shelterResults li{
+  background-color: #a64ac9;
+  width: 60%;
+  padding-top: 20px;
+  margin: 0 auto;
+  border: 1px solid #f5e6cc;
+  margin-top: 30px;
+  color: #f5e6cc;
+  font-weight: bold;
+}
+
+@media(max-width: 540px){
+.shelterResults li {
+  width: 90%;
+}
+}
 
 h5 {
 text-align: center;
@@ -189,18 +247,27 @@ color: #a64ac9;
 .image1 {
   text-align: center;
   }
+.image1 a {
+  font-size: 20px;
+}
 .image2 {
-  text-align: center;
+  /*text-align: center;*/
   }
 @media(max-width:475px){
   .image2 {
     width:80%;
   }
+  .image2 a {
+    font-size: 20px;
+    margin: 0 auto;
+  }
 }
 .image3 {
   text-align: center;
-
-   }
+}
+.image3 a{
+  font-size: 20px;
+}
    .clearfix {
      color: #fccd04;
    }

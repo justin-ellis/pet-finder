@@ -40,8 +40,8 @@
                     </button>
 
                     <ul class="dropdown-menu">
-                      <li><a href="/session/register">Register to be a part of our community</a></li>
-                      <li><a href="/session/login">Log in</a></li>
+                      <!-- <li><a href="/session/register">Register to be a part of our community</a></li>
+                      <li><a href="/session/login">Log in</a></li> -->
                       <li><a href='/members'>Members</a></li>
                       <li><a href='/session/logout'>Log Out</a></li>
                       <li><a href="https://www.petfinder.com/animal-shelters-and-rescues/fostering-dogs/">Fostering dogs and cats</a></li>
@@ -119,6 +119,7 @@
                    <input class="inputs" ng-model="petCtrl.zippy" type="text" placeholder=" Zip " value="submit"><br>
                    <input class="button" type="submit" submit="submit">
                  </form><br/>
+                 <div class='shelterResults'>
                  <ul id='stuff'>
                    <li class='shelter' ng-repeat="shelters in petCtrl.shelters">
                      Shelter Name: {{shelters.name}}<br/>
@@ -126,6 +127,7 @@
                      Email: {{shelters.email}}<br/><br>
                    </li>
                  </ul>
+               </div>
 
               </div>
                 </div>
@@ -189,8 +191,8 @@
 
            <div class="col-md-4">
              <div class="image2">
-             <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle"  width="394" height="326">
-             <a class='modal-text' data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA">In case you were wondering...</a>
+             <img src="https://peopledotcom.files.wordpress.com/2014/04/dog-cat-600.jpg" class="img-circle"  width="324" height="256">
+             <a class='modal-text' data-toggle="popover" data-content="that's 11,438 Shelter and rescue members across NORTH AMERICA"><br>In case you were wondering...</a><br>
              <script>
              $(document).ready(function(){
              $('[data-toggle="popover"]').popover();
